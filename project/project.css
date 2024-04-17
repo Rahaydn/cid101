@@ -209,6 +209,12 @@ height: 14px;
 .member-text{
     margin-left: 100px ;
 }
+.member-li li{
+    vertical-align:middle
+}
+.member-li span{
+    letter-spacing: 5px;
+}
 .member-li img{
     padding-right: 5px;
     margin-top:10px ;
