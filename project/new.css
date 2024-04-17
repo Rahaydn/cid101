@@ -1,0 +1,186 @@
+body{
+    background-image: url(photo/bgimg.jpg);
+    /* position: relative; */
+}
+.head-nav a{
+    font-size: 18px;
+    margin: 0 50px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
+    font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
+    font-style: normal;
+    overflow: hidden;
+    position: relative;
+}
+.head-nav a span {
+    display: block;
+    padding: 10px;
+    transition: .4s;
+}
+.head-nav a span::after{ 
+    content: attr(data-txt);
+    display: block;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    color: #3a3eca;
+}
+.head-nav a:hover span{
+    translate: 0 -100%;/* 重新定義座標位址 */
+}
+.head-nav {
+    background-color: #f6f6f6;
+    height: 100px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.news-img  img{
+    width: 100%;
+    height: 500px;
+}
+a{
+    color: black;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-family: "Noto Sans TC", sans-serif;
+    /* line-height: 2.5em;
+    display: inline-block; */
+}
+p {
+    line-height: 15px;
+    letter-spacing: 5px;/* 文字間距 */
+    font-family: "Noto Sans TC", sans-serif;   
+}
+.ribbon {
+    position: relative;
+    position: fixed;
+    top:60%;
+    right: 0;
+    width: 100px;
+    padding: 10px 0px 10px 30px;
+    background: #8E5421;
+    font-size: 12px;
+}
+.content-rib a:hover , .content a:hover{
+    color: #0b0b0b;
+}
+.content a , .content-rib a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration : none;
+}
+.content:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbon img {
+    width: 12px;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+.ribbons {
+    position: relative;
+    position: fixed;
+    top:67%;
+    right: 0;
+    width: 100px;
+    padding: 8px 0px 8px 10px; 
+    background: #E4AD7C;
+    font-size: 12px;
+}
+.content-rib:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #E4AD7C transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content-rib:after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #E4AD7C transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbons img {
+    width: 12px;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+.news{
+    margin: auto;
+    padding: 0 120px;
+    margin-bottom: 50px;
+}
+.btn {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.btn button.active{
+    background-color: #EF8B32;
+}
+.btn button{
+    padding: 20px 15px ;
+    font-size: 18px;
+    margin: 0 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #F6F6F6;
+}
+.content1{
+    display: block;
+    text-align: left;
+}
+li {
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid #000;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+li a{
+    line-height: 2.5em;
+}
+.breadcrumb{
+    width: 1200px;
+    margin: auto;
+}
+.breadcrumb ul{
+    display: flex;
+    margin: 15px;
+}
+.breadcrumb li{
+    width: auto;
+    border: none;
+    padding-block: 5px;
+}
+.breadcrumb ul li:not(:first-child)::before {
+    content: "/";
+    margin: 0px 8px;
+    font-weight: 600;
+}

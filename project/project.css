@@ -1,0 +1,305 @@
+body{
+    background-image: url(photo/bgimg.jpg);
+    /* position: relative; */
+}
+nav a{
+    font-size: 18px;
+    margin: 0 50px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
+    font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
+    font-style: normal;
+    overflow: hidden;
+    position: relative;
+}
+nav a span {
+    display: block;
+    padding: 10px;
+    transition: .4s;
+}
+nav a span::after{ 
+    content: attr(data-txt);
+    display: block;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    color: #3a3eca;
+}
+nav a:hover span{
+    translate: 0 -100%;/* 重新定義座標位址 */
+}
+nav {
+    background-color: #f6f6f6;
+    height: 100px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.front-img {
+    width:100%;
+    max-width: 100%;
+    position: relative;
+}
+img {
+    width: 100%;
+}
+a{
+    color: black;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-family: "Noto Sans TC", sans-serif;
+}
+p {
+    line-height: 24px;
+    letter-spacing: 5px;/* 文字間距 */
+    font-family: "Noto Sans TC", sans-serif;
+    
+}
+.menu-a {
+    margin: 100px 0px;
+    /* background-color: #fa0; */
+}
+.menu-a a {
+    display: inline-block; /* 让a元素成为區塊元素 */
+    transition: opacity 0.3s; /* 添加渡過效果 */
+}
+
+.menu-a a:hover {
+    opacity: 0.5; /* 设置悬停时的透明度 */
+}
+.text {
+    font-size: 64px;
+    color: #fff;
+    position: absolute; 
+    top: 15%;
+    left: 70%; 
+    width: 30%;
+    text-align: start;
+    font-family: "Condiment", cursive;
+}
+.logo {
+    margin: 0px;
+}
+.ribbon {
+    position: relative;
+    position: fixed;
+    top:60%;
+    right: 0;
+    width: 100px;
+    padding: 10px 0px 10px 30px;
+    background: #8E5421;
+    font-size: 12px;
+}
+.content-rib a:hover , .content a:hover{
+    color: #0b0b0b;
+}
+.content a , .content-rib a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration : none;
+}
+.content:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbon img {
+    width: 12px;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+.ribbons {
+    position: relative;
+    position: fixed;
+    top:67%;
+    right: 0;
+    width: 100px;
+    padding: 8px 0px 8px 10px; 
+    background: #E4AD7C;
+    font-size: 12px;
+}
+.content-rib:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #E4AD7C transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content-rib:after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #E4AD7C transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbons img {
+    width: 12px;
+    margin-right: 10px;
+    padding-top: 7px;
+}
+/* 關於我們 */
+.about {
+    display: flex;
+}
+.about-img img {
+width: 100%;
+height: auto;
+/* background-color: blue; */
+}
+.about{
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+}
+.about-text{
+    text-align: left;
+    width: 600px;
+    position: relative;
+    left:110px;
+    top: 85px;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 0 0 40px;
+    letter-spacing: 15px;
+    
+}
+.lines {
+    font-size: 18px;
+    letter-spacing: 8px;
+}
+/* 會員優惠 */
+.member {
+    display: flex;
+    text-align: left;
+    margin:0 100px;
+}
+.member .member-text img {
+width: 14px;
+height: 14px;
+}
+.member img {
+    width: 700px;
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover; /* 適應到其使用高度和寬度確定的方塊 */
+}
+.member-text{
+    margin-left: 100px ;
+}
+.member-li img{
+    padding-right: 5px;
+    margin-top:10px ;
+    max-width: 100%;
+}
+/* 用餐環境 */
+.meal {
+    display: flex;
+    margin: 100px;
+    margin-bottom: 50px;
+}
+.meal-text{
+    width: 460px;
+    padding-right: 100px;
+    
+}
+.meal-img{
+    height: 400px;
+}
+/* 頁尾 */
+.footer {
+    display: flex;
+    margin: 20px 100px;
+    text-align: center;
+    align-items: center;
+}
+.footer h3{
+    font-size: 24px;
+    padding: 0;
+}
+.footer i{
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-right: 8px;
+}
+.cafe i , .menu-link i , .reserve i {
+    padding-top: 60px;
+}
+.footer > div {
+    height: 40vh;
+    padding: 40px;
+    border-right: 2px solid black;
+}
+.time img {
+    width: 80px;
+    padding-top: 30px;
+}
+.footer .time  {
+    border: none;
+}
+.time-nb {
+    font-family: "Red Hat Display";
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 24px;
+}
+.opentime p{
+    white-space: pre-line; /*合併空白序列，但是保留换行。*/
+    margin-bottom: 20px;
+}
+.footer-logo {
+    background-color: #1D2126;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.logo-map ,.logo-phone{
+    display: flex;
+    align-items: center;
+}
+.footer-logo .address p{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 12px;
+    
+}
+.address img{
+    width: 25px;
+    padding: 10px;
+}
+.footer-logo >img {
+    width: 95px;
+    margin: 30px;
+    max-width: 100%;
+}
+.account-icon{
+    position: absolute;
+    right: 300px;
+    bottom: 0px;
+}
+.account-icon img{
+    width: 15px;
+    padding: 5px;
+}
