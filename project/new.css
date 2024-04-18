@@ -192,3 +192,37 @@ li a{
     margin: 0px 8px;
     font-weight: 600;
 }
+.footer-logo {
+    background-color: #1D2126;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.logo-map ,.logo-phone{
+    display: flex;
+    align-items: center;
+}
+.footer-logo .address p{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 12px;
+    
+}
+.address img{
+    width: 25px;
+    padding: 10px;
+}
+.footer-logo >img {
+    width: 95px;
+    margin: 30px;
+    max-width: 100%;
+}
+.account-icon{
+    position: absolute;
+    right: 300px;
+    bottom: 0px;
+}
+.account-icon img{
+    width: 15px;
+    padding: 5px;
+}

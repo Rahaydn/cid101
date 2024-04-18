@@ -4,58 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="menu.css">
     <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
-    <style>
-        .flexslider .slides img{
-            height: 300px;
-            object-fit: contain;
-        }
-        .coffee-bg  ,.cake-bg {
-            display: flex;
-            width: 100%;
-            background-image: url(photo/rectangle.png);
-        }
-        .coffee-bg  ,.cake-bg , .sandwich{
-            width: 100%;
-            display: flex;
-            /* letter-spacing: 2px;
-            line-height: 1.5px; */
-        }
-        .flexslider{
-            border: 4px solid #fff0;
-            margin: 0;
-            padding: 60px 0px;
-            background:#fff0;
-            position: relative;
-        }
-        .flex-control-nav{
-            position: absolute;
-            bottom: 30px;
-        }
-        body{
-            background-image: url(photo/bgimg.jpg);
-        }
-        h3 {
-            margin:20 0px ;
-            font-size: 32px;
-            letter-spacing: 2px;
-            line-height: 1.5px; 
-        }
-        p{
-            letter-spacing: 2px;
-            line-height: 1.5px;
-        }
-        h4{
-            letter-spacing: 2px;
-            line-height: 1.5px;
-        }
-    </style>
 </head>
 <body>
+    <div class="head">
+        <nav class="head-nav">
+            <a href="https://rahaydn.github.io/cid101/project/news.html"><span data-txt="最新消息">最新消息</span></a>
+            <a href="#"><span data-txt="門市菜單">門市菜單</span></a>
+            <a href="https://rahaydn.github.io/cid101/project/index.html" class="logo"><img src="photo/touaki (2).png" alt="logo"></a>
+            <a href="#"><span data-txt="咖啡專覽">咖啡專覽</span></a>
+            <a href="#"><span data-txt="常見問題">常見問題</span></a>
+        </nav>
+        <div class="news-img">
+            <img src="photo/aaa.png" alt="菜單">
+        </div>
+        <div class="ribbon">
+            <div class="content">
+                <a href="#">
+                    <img src="photo/member1.png" alt="">會員登入</div>
+                </a>
+            </div>
+        <div class="ribbons">
+            <div class="content-rib">
+                <a href="#">
+                    <img src="photo/datd.png" alt="">立即預約</div>
+                </a>
+            </div>
+    </div>
+    <div>
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="https://rahaydn.github.io/cid101/project/index.html">首頁</a></li>
+                <li><a href="https://rahaydn.github.io/cid101/project/news.html">菜單</a> </li> 
+            </ul>
+        </nav>
     <div class="coffee-bg">
-        <div class="flexslider" style="width:350px; margin-left:100px;">
+        <div class="flexslider" style="width:350px; margin-left:200px;">
             <ul class="slides">
                 <li><img src="photo/le.jpg" alt="" width="350" height="250"></li>
                 <li><img src="photo//coffee.jpg" alt="" width="350" height="250"></li>
@@ -66,37 +54,80 @@
             <h3>黑咖啡 BLACK COFFE</h3>
             <h4>冠軍黑咖啡<span>55</span><span>70</span></h4>
             <p>Champion black coffe</p>
-            <p class="Remark">阿倫比亞水洗豆/中深烘培</p>
+            <p class="remark">阿倫比亞水洗豆/中深烘培</p>
             <h4>冠軍黑咖啡<span>65</span><span>80</span></h4>
             <p>Seasonal coffe</p>
             <h4>檸檬黑咖啡<span>80</span><span>100</span></h4>
             <p>lemon black coffe</p>
             <h3>其他 OTHERS</h3>
-            <h4>紅茶拿鐵<span>90</span><span>110</span></h4>
+            <h4 class="red">紅茶拿鐵<span>90</span><span>110</span></h4>
             <p>Black Tea Latte</p>
-            <p class="Remark">錫蘭紅茶/鮮乳</p>
-            <h4>抹茶拿鐵<span>90</span><span>110</span></h4>
+            <p class="remark">錫蘭紅茶/鮮乳</p>
+            <h4 class="green">抹茶拿鐵<span>90</span><span>110</span></h4>
             <p>Matcha Latte</p>
-            <p class="Remark">日本抹茶/鮮乳</p>
-
+            <p class="remark">日本抹茶/鮮乳</p>
         </div>
     </div>
     <div class="sandwich">
-        <div class="flexslider" style="width:350px; margin-left:100px;">
+        <div class="flexslider" style="width:350px; margin-left:200px;">
             <ul class="slides">
                 <li><img src="photo/sw.jpg" alt="" width="350" height="250"></li>
                 <li><img src="photo//swc.jpg" alt="" width="350" height="250"></li>
                 <li><img src="photo/san.jpg" alt="" width="350" height="250"></li>
             </ul>
         </div>
+        <div class="menu-txt">
+            <h3>三明治 HOT SANDWICH</h3>
+            <h4>雞肉三明治<span>150</span></h4>
+            <p>Chicken Sandwich</p>
+            <h4>牛肉三明治<span>180</span></h4>
+            <p>Beef Sandwich</p>
+            <h4>古巴三明治<span>100</span></h4>
+            <p>Cuban Sandwich</p>
+            <h4>起司三明治<span>100</span></h4>
+            <p>Cheese Sandwich</p>
+            <h3>吐司 TOAST</h3>
+            <h4 class="green">奶酥吐司<span>75</span></h4>
+            <p>Matcha Latte</p>
+            <h4>巧克力吐司<span>75</span></h4>
+            <p>Chocolate Toast</p>
+        </div>
     </div>
     <div class="cake-bg">
-        <div class="flexslider" style="width:350px; margin-left:100px;">
+        <div class="flexslider" style="width:350px; margin-left:200px;">
             <ul class="slides">
                 <li><img src="photo/cake.jpg" alt="" width="350" height="250"></li>
                 <li><img src="photo//cake2.jpg" alt="" width="350" height="250"></li>
                 <li><img src="photo/cake3.jpg" alt="" width="350" height="250"></li>
             </ul>
+        </div>
+        <div class="menu-txt">
+            <h3>甜點 DESSERT</h3>
+            <h4 class="pie">岩燒黃金乳酪派<span>65</span></h4>
+            <p>Cream Cheese Pie</p>
+            <h4 class="cake">藍莓慕斯蛋糕<span>65</span></h4>
+            <p>Blueberry Mousse Cake</p>
+            <h4>小米甜甜圈<span>35</span></h4>
+            <p>Millet Donuts</p>
+            <h3>沙拉 Salad</h3>
+            <h4 class="salad">雞肉沙拉<span>120</span></h4>
+            <p>Chicken Salad</p>
+            <h4 class="garden">田園沙拉<span>120</span></h4>
+            <p>Garden Salad</p>
+        </div>
+    </div>
+    <div class="footer-logo">
+        <img src="photo/touaki.png" alt="logo">
+        <div class="address">
+            <div class="logo-map"><img src="photo/phone.png" alt=""><p>328 桃園市觀音區莊三街8號</p></div>
+            <div class="logo-phone"><img src="photo/map.png" alt=""><p>03-1234567</p></div>
+            <p>圖片參考網址:https://www.lebrewlife.co/blogs/coffee/70257</p>
+            <p>Copyright © 2024 豆燒咖啡廳WiEdu CO.</p>
+        </div>
+        <div class="account-icon">
+            <a href="#"><img src="photo/Vector (4).png" alt="line"></a>
+            <a href="#"><img src="photo/Vector (2).png" alt="fb"></a>
+            <a href="#"><img src="photo/Vector (3).png" alt="instagram"></a>
         </div>
     </div>
     <script>

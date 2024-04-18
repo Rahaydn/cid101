@@ -5,7 +5,6 @@ body{
 .head-nav a{
     font-size: 18px;
     margin: 0 50px;
-    font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
     font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
     font-style: normal;
@@ -17,7 +16,7 @@ body{
     padding: 10px;
     transition: .4s;
 }
-.head-nav a span::after{ 
+.head-nav span::after{ 
     content: attr(data-txt);
     display: block;
     padding: 10px;
@@ -37,4 +36,210 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.breadcrumb{
+    width: 1200px;
+    margin: auto;
+}
+.breadcrumb ul{
+    display: flex;
+    margin: 15px;
+}
+.breadcrumb li{
+    width: auto;
+    border: none;
+    padding-block: 5px;
+}
+.breadcrumb ul li:not(:first-child)::before {
+    content: "/";
+    margin: 0px 8px;
+    font-weight: 600;
+}
+.front-img {
+    width:100%;
+    max-width: 100%;
+    position: relative;
+}
+img {
+    width: 100%;
+}
+a{
+    color: black;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+p {
+    line-height: 24px;
+    letter-spacing: 2px;/* 文字間距 */
+    
+}
+.ribbon {
+    position: relative;
+    position: fixed;
+    top:60%;
+    right: 0;
+    width: 100px;
+    padding: 10px 0px 10px 30px;
+    background: #8E5421;
+    font-size: 12px;
+}
+.content-rib a:hover , .content a:hover{
+    color: #0b0b0b;
+}
+.content a , .content-rib a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration : none;
+}
+.content:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbon img {
+    width: 12px;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+.ribbons {
+    position: relative;
+    position: fixed;
+    top:67%;
+    right: 0;
+    width: 100px;
+    padding: 8px 0px 8px 10px; 
+    background: #E4AD7C;
+    font-size: 12px;
+}
+.content-rib:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #E4AD7C transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content-rib:after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #E4AD7C transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbons img {
+    width: 12px;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+.coffee-bg  ,.cake-bg {
+    display: flex;
+    width: 100%;
+    padding: 100px 0px;
+    background-image: url(photo/rectangle.png);
+}
+.coffee-bg  ,.cake-bg , .sandwich{
+    width: 100%;
+    display: flex;
+}
+.flexslider .slider img{
+    object-fit: cover;
+    height: 350px;
+}
+.flexslider{
+    border: 4px solid #fff0;
+    margin: 0;
+    padding: 60px 0px;
+    background:#fff0;
+    position: relative;
+}
+.flex-control-nav{
+    position: absolute;
+    bottom: 30px;
+}
+.menu-txt{
+line-height: 1.5;
+}
+.menu-txt h3 {
+    font-size: 32px;
+    font-weight: bold;
+}
+.menu-txt h4 {
+    font-size: 24px;
+}
+
+.remark{
+    font-size: 12px;
+}
+.menu-txt   span {
+    padding-left: 10px;
+}
+.menu-txt h4 :first-child {
+    padding-left: 120px;
+}
+.red :first-child , .green :first-child{
+    padding-left: 180px;
+}
+.menu-txt {
+    margin-top: 45px;
+    margin-left: 100px;
+}
+.pie :first-child {
+    padding-left: 82px;
+}
+.cake :first-child{
+    padding-left: 100px;
+}
+.salad :first-child , .garden :first-child{
+    padding-left: 135px;
+}
+.footer-logo {
+    background-color: #1D2126;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.logo-map ,.logo-phone{
+    display: flex;
+    align-items: center;
+}
+.footer-logo .address p{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 12px;
+    
+}
+.address img{
+    width: 25px;
+    padding: 10px;
+}
+.footer-logo >img {
+    width: 95px;
+    margin: 30px;
+    max-width: 100%;
+}
+.account-icon{
+    position: absolute;
+    right: 300px;
+    bottom: 0px;
+}
+.account-icon img{
+    width: 15px;
+    padding: 5px;
 }
