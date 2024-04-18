@@ -193,21 +193,27 @@ line-height: 1.5;
 .menu-txt h4 :first-child {
     padding-left: 120px;
 }
-.red :first-child , .green :first-child{
-    padding-left: 180px;
+.menu-txt .red :first-child ,.menu-txt  .green :first-child{
+    padding-left: 142px;
 }
 .menu-txt {
     margin-top: 45px;
     margin-left: 100px;
 }
-.pie :first-child {
-    padding-left: 82px;
+.menu-txt .latte :first-child {
+    padding-left: 150px;
 }
-.cake :first-child{
-    padding-left: 100px;
+.menu-txt .toast :first-child{
+    padding-left: 130px;
 }
-.salad :first-child , .garden :first-child{
+.menu-txt .salad :first-child ,.menu-txt .garden :first-child{
     padding-left: 135px;
+}
+.menu-txt .pie :first-child {
+    padding-left: 71px;
+}
+.menu-txt .cake :first-child {
+    padding-left: 96px;
 }
 .footer-logo {
     background-color: #1D2126;
