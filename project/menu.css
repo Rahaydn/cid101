@@ -158,9 +158,13 @@ p {
     width: 100%;
     display: flex;
 }
-.flexslider .slider img{
+.sandwich{
+    padding-top: 60px;
+}
+.coffee-bg .flexslider .slider img{
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    height: 350px;
 }
 .flexslider{
     border: 4px solid #fff0;
