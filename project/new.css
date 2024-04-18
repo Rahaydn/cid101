@@ -1,6 +1,6 @@
 body{
     background-image: url(photo/bgimg.jpg);
-    /* position: relative; */
+    font-family: "Noto Sans TC", sans-serif;
 }
 .head-nav a{
     font-size: 18px;
@@ -45,7 +45,7 @@ body{
 }
 a{
     color: black;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     text-decoration: none;
     font-family: "Noto Sans TC", sans-serif;
     /* line-height: 2.5em;
@@ -53,7 +53,7 @@ a{
 }
 p {
     line-height: 15px;
-    letter-spacing: 5px;/* 文字間距 */
+    letter-spacing: 2px;/* 文字間距 */
     font-family: "Noto Sans TC", sans-serif;   
 }
 .ribbon {

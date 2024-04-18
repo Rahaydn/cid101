@@ -1,11 +1,10 @@
 body{
     background-image: url(photo/bgimg.jpg);
-    /* position: relative; */
+    font-family: "Noto Sans TC", sans-serif;
 }
 nav a{
     font-size: 18px;
     margin: 0 50px;
-    font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
     font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
     font-style: normal;
@@ -48,13 +47,12 @@ img {
 }
 a{
     color: black;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     text-decoration: none;
-    font-family: "Noto Sans TC", sans-serif;
 }
 p {
     line-height: 24px;
-    letter-spacing: 5px;/* 文字間距 */
+    letter-spacing: 2px;/* 文字間距 */
     font-family: "Noto Sans TC", sans-serif;
     
 }
@@ -183,12 +181,11 @@ h3 {
     font-size: 36px;
     font-weight: bold;
     padding: 0 0 40px;
-    letter-spacing: 15px;
+    letter-spacing: 10px;
     
 }
 .lines {
     font-size: 18px;
-    letter-spacing: 8px;
 }
 /* 會員優惠 */
 .member {

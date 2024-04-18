@@ -1,0 +1,40 @@
+body{
+    background-image: url(photo/bgimg.jpg);
+    font-family: "Noto Sans TC", sans-serif;
+}
+.head-nav a{
+    font-size: 18px;
+    margin: 0 50px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
+    font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
+    font-style: normal;
+    overflow: hidden;
+    position: relative;
+}
+.head-nav a span {
+    display: block;
+    padding: 10px;
+    transition: .4s;
+}
+.head-nav a span::after{ 
+    content: attr(data-txt);
+    display: block;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    color: #3a3eca;
+}
+.head-nav a:hover span{
+    translate: 0 -100%;/* 重新定義座標位址 */
+}
+.head-nav {
+    background-color: #f6f6f6;
+    height: 100px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
