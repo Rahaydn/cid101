@@ -282,14 +282,13 @@ height: 14px;
     align-items: center;
 }
 .footer-logo .address p{
-    padding-top: 10px;
     color: #fff;
-    font-size: 12px;
-    
+    font-size: 12px; 
 }
 .address img{
     width: 25px;
     padding: 10px;
+    object-fit: contain;
 }
 .footer-logo >img {
     width: 95px;
