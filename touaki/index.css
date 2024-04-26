@@ -2,21 +2,24 @@ body{
     background-image: url(photo/bgimg.jpg);
     font-family: "Noto Sans TC", sans-serif;
 }
-nav a{
+.nav-log{
+    margin-left: 50px;
+}
+.head nav  ul li a{
     font-size: 18px;
-    margin: 0 50px;
+    margin: 0 10px;
     font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
     font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
     font-style: normal;
     overflow: hidden;
     position: relative;
 }
-nav a span {
+.head nav ul li a span {
     display: block;
     padding: 10px;
     transition: .4s;
 }
-nav a span::after{ 
+.head nav ul li a span::after{ 
     content: attr(data-txt);
     display: block;
     padding: 10px;
@@ -26,16 +29,26 @@ nav a span::after{
     top: 100%;
     color: #3a3eca;
 }
-nav a:hover span{
+.head nav ul li a:hover span{
     translate: 0 -100%;/* 重新定義座標位址 */
 }
-nav {
-    background-color: #f6f6f6;
-    height: 70px;
+.head nav {
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.head nav ul{
+    display: flex;
+}
+.head nav li{
+    display: flex;
+    
+}
+.head-nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F6F6F6;
 }
 .front-img {
     width:100%;
@@ -53,33 +66,25 @@ a{
 p {
     line-height: 24px;
     letter-spacing: 2px;/* 文字間距 */
-    font-family: "Noto Sans TC", sans-serif;
     
+}
+.logo img{
+    width: 100px;
 }
 .menu-a {
     margin-bottom: 150px;
-}
-.menu-a a {
-    display: inline-block; /* 让a元素成为區塊元素 */
-    transition: opacity 0.3s; /* 添加渡過效果 */
-}
-
-.menu-a a:hover {
-    opacity: 0.5; /* 设置悬停时的透明度 */
 }
 .text {
     font-size: 64px;
     color: #fff;
     position: absolute; 
     top: 15%;
-    left: 70%; 
+    left: 60%; 
     width: 30%;
-    text-align: start;
+    line-height: 1.5em;
     font-family: "Condiment", cursive;
 }
-.logo {
-    margin: 0px;
-}
+/* 絲帶 */
 .ribbon {
     position: relative;
     position: fixed;
@@ -90,13 +95,17 @@ p {
     background: #8E5421;
     font-size: 12px;
 }
+.content-rib , .content{
+    display: flex;
+    align-items: center;
+}
 .content-rib a:hover , .content a:hover{
     color: #0b0b0b;
 }
 .content a , .content-rib a{
     color: #fff;
     margin-right: 5px;
-    text-decoration : none;
+    display: contents;
 }
 .content:before {
     content: "";
@@ -118,24 +127,23 @@ p {
 }
 .ribbon img {
     width: 12px;
-    margin-right: 10px;
-    padding-top: 5px;
+    margin: 5px;
 }
 .ribbons {
     position: relative;
     position: fixed;
-    top:67%;
+    top:69%;
     right: 0;
     width: 100px;
     padding: 8px 0px 8px 10px; 
-    background: #E4AD7C;
+    background: #EF8B32;
     font-size: 12px;
 }
 .content-rib:before {
     content: "";
     position: absolute;
     border-style: solid;
-    border-color: #E4AD7C transparent;
+    border-color: #EF8B32 transparent;
     top: 0px ;
     left: -35px;
     border-width: 35px 0 0 35px;
@@ -144,15 +152,14 @@ p {
     content: "";
     position: absolute;
     border-style: solid;
-    border-color: #E4AD7C transparent;
+    border-color: #EF8B32 transparent;
     bottom: 0px;
     left: -35px;
     border-width: 0px 0px 35px 35px;
 }
 .ribbons img {
     width: 12px;
-    margin-right: 10px;
-    padding-top: 7px;
+    margin: 5px;
 }
 /* 關於我們 */
 .about {
@@ -235,16 +242,14 @@ height: 14px;
     display: flex;
     margin: 20px 100px;
     text-align: center;
-    align-items: center;
 }
 .footer h3{
     font-size: 24px;
     padding: 0;
 }
 .footer i{
-    font-size: 35px;
-    margin-bottom: 20px;
-    margin-right: 8px;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 .cafe i , .menu-link i , .reserve i {
     padding-top: 60px;
@@ -274,7 +279,6 @@ height: 14px;
 .footer-logo {
     background-color: #1D2126;
     display: flex;
-    justify-content: center;
     position: relative;
 }
 .logo-map ,.logo-phone{
@@ -285,14 +289,17 @@ height: 14px;
     color: #fff;
     font-size: 12px; 
 }
+.address{
+    margin-top: 40px;
+}
 .address img{
-    width: 25px;
-    padding: 10px;
+    width: 15px;
+    margin-right: 10px;
     object-fit: contain;
 }
 .footer-logo >img {
     width: 95px;
-    margin: 30px;
+    margin: 30px 120px 30px 200px;
     max-width: 100%;
 }
 .account-icon{
