@@ -1,9 +1,12 @@
 body{
     background-image: url(photo/bgimg.jpg);
     font-family: "Noto Sans TC", sans-serif;
+    /* font-size:  clamp(32px, 4.6875vw, 82px); */
 }
-.nav-log{
-    margin-left: 50px;
+.nav-log img{
+    position: absolute;
+    left: 50%;
+    top: 0;
 }
 .head nav  ul li a{
     font-size: 18px;
@@ -33,21 +36,30 @@ body{
     translate: 0 -100%;/* 重新定義座標位址 */
 }
 .head nav {
+    width: 100%;
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .head nav ul{
     display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 100px;
 }
 .head nav li{
     display: flex;
     
 }
+.head nav ul li:nth-child(3)::before{
+    content: '';
+    margin-left: 100px;
+}
 .head-nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #F6F6F6;
 }
 .front-img {
@@ -68,9 +80,7 @@ p {
     letter-spacing: 2px;/* 文字間距 */
     
 }
-.logo img{
-    width: 100px;
-}
+
 .menu-a {
     margin-bottom: 150px;
 }
@@ -84,6 +94,73 @@ p {
     line-height: 1.5em;
     font-family: "Condiment", cursive;
 }
+/* 漢堡 */
+
+button {
+    width: 40px;
+    height: 40px;
+    background-color: #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+    margin-right: 10px;
+}
+button span {
+    width: 80%;
+    height: 2px;
+    background-color: #fff;
+}
+button {
+display: none;
+}
+@media screen and (max-width: 768px) {
+button {
+    display: flex;
+}
+.nav-log img{
+    position: unset;
+    width: 60px;
+}
+.head-nav nav{
+    justify-content: start;
+}
+.head-nav nav ul{
+    width: 80%;
+    display: block;
+    text-align: center;
+    padding-left: 0;
+}
+.head-nav nav ul li{
+    background-color: #fff;
+    border: 1px solid black;
+    justify-content: center;
+    padding: 20px 0;
+    
+}
+.head nav ul li a span::after{
+    display: none;
+}
+.head nav ul li a:hover span{
+    translate: 0;
+    }
+.head nav ul li:nth-child(3)::before{
+    content: '';
+    margin-left: 0;
+    }
+#menu{
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 60px;
+    }
+#menu.show {
+        display: block; 
+    }
+}
+
 /* 絲帶 */
 .ribbon {
     position: relative;
@@ -91,7 +168,7 @@ p {
     top:60%;
     right: 0;
     width: 100px;
-    padding: 10px 0px 10px 30px;
+    padding: 10px 0px 10px 10px;
     background: #8E5421;
     font-size: 12px;
 }
@@ -183,7 +260,7 @@ height: auto;
     top: 85px;
 }
 
-h3 {
+h2 {
     font-size: 36px;
     font-weight: bold;
     padding: 0 0 40px;
@@ -258,6 +335,7 @@ height: 14px;
     height: 40vh;
     padding: 40px;
     border-right: 2px solid black;
+    min-height: 200px;
 }
 .time img {
     width: 80px;

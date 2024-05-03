@@ -17,24 +17,28 @@
 <body>
     <div class="head">
         <div class="head-nav">
-            <div class="nav-log"><a href="https://rahaydn.github.io/cid101/project/index.html" class="logo">
-                <img src="photo/touaki (2).png" alt="logo">
-            </a>
-        </div>
             <nav>
-                <ul>
-                    <li><a href="https://rahaydn.github.io/cid101/project/news.html"><span data-txt="最新消息">最新消息</span></a>
-                    </li>
-                    <li><a href="https://rahaydn.github.io/cid101/project/menu.html"><span data-txt="門市菜單">門市菜單</span></a>
-                    </li>
-                    <li><a href="#"><span data-txt="咖啡專覽">咖啡專覽</span></a></li>
-                    <li><a href="#"><span data-txt="常見問題">常見問題</span></a></li>
-                </ul>
+                <div class="nav-log"><a href="https://rahaydn.github.io/cid101/project/index.html" class="logo">
+                    <img src="/touaki/photo/touaki (2).png" alt="logo"></a>
+                </div>
+                    <ul id="menu">
+                        <li><a href="https://rahaydn.github.io/cid101/project/news.html"><span data-txt="最新消息">最新消息</span></a>
+                        </li>
+                        <li><a href="https://rahaydn.github.io/cid101/project/menu.html"><span data-txt="門市菜單">門市菜單</span></a>
+                        </li>
+                        <li><a href="#"><span data-txt="咖啡專覽">咖啡專覽</span></a></li>
+                        <li><a href="#"><span data-txt="常見問題">常見問題</span></a></li>
+                    </ul>
+                    <button id="btnHam" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </nav>
         </div>
             <div class="front-img">
                 <img src="photo/db.jpg" alt="首頁圖">
-                <span class="text">Delicious Coffee Shop</span>
+                <h1 class="text">Delicious Coffee Shop</h1>
             </div>
             <div class="ribbon">
                 <div class="content">
@@ -55,7 +59,7 @@
             </section>
             <section class="about">
             <div class="about-text">
-                <h3>關於我們</h3>
+                <h2>關於我們</h2>
                 <p class="lines">我們會採用不同的烘焙方式和技術來烘焙咖啡豆，以呈現出不同的風味和口感。我們的烘焙師精通各種烘焙技術，以確保每一杯咖啡都能夠達到最佳的品質標準。</p>
             </div>
             <div class="about-img">
@@ -65,7 +69,7 @@
             <section class="member">
                 <img src="photo/threecoffe.jpg" alt="會員">
                 <div class="member-text">
-                    <h3>會員優惠</h3>
+                    <h2>會員優惠</h2>
                     <p>我們咖啡店提供會員優惠以回饋我們忠實的顧客。</p>
                     <ul class="member-li">
                         <li><img src="photo/Group.png" alt=""><span>打95折</span></li>
@@ -77,7 +81,7 @@
             </section>
             <section class="meal">
                 <div class="meal-text">
-                    <h3>用餐環境</h3>
+                    <h2>用餐環境</h2>
                     <p>環境和氛圍：我們的咖啡店營造出溫馨舒適的環境和氛圍，讓顧客可以放鬆身心受咖啡的美好時刻。無論是獨自一人閱讀書報，還是和朋友家人聚會聊天，我們的咖都是一個理想的場所。</p></div>  
                     <div class="meal-img">
                         <img src="photo/cafe-restaurant-.jpg" alt="餐廳">
@@ -87,7 +91,7 @@
             <div class="footer">
                 <div class="opentime">
                     <i class="fa-regular fa-clock"></i>
-                    <h3>營業時間</h3>
+                    <h2>營業時間</h2>
                     <p>
                     豆燒咖啡館 
                     營業時間:11:00~24:00
@@ -135,5 +139,14 @@
             </div>   
         </div>
     </div>
+
+
+
+    <script>
+        document.getElementById('btnHam').addEventListener('click', function () {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('show');
+    });
+    </script>
 </body>
 </html>

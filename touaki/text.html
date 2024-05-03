@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+        }        
+        button {
+        display: none;
+        }
+        button {
+            margin-left: 90%;
+            width: 40px;
+            height: 40px;
+            background-color: #888;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            margin-right: 10px;
+        }
+        button span {
+            width: 80%;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        #menu {
+            border: 1px solid pink; 
+            display: none; 
+            position: absolute; 
+            top: 40px; 
+            right: 0; 
+            background-color: white; 
+            padding: 10px; 
+        }
+
+        #menu.visible {
+            display: block;
+        }
+
+        #menu a {
+            display: block;
+            text-decoration: none; 
+            color: black; 
+            margin-bottom: 5px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+        button {
+            display: flex;
+        }
+        }
+
+
+    </style>
+</head>
+<body>
+<button id="btnHam" class="">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+<nav id="menu">
+    <ul>
+        <li><a href="">menu 1</a></li>
+        <li><a href="">menu 2</a></li>
+        <li><a href="">menu 3</a></li>
+        <li><a href="">menu 4</a></li>
+        <li><a href="">menu 5</a></li>
+        <li><a href="">menu 6</a></li>
+        <li><a href="">menu 7</a></li>
+        <li><a href="">menu 8</a></li>
+    </ul>
+</nav>
+
+<script>
+    // Get references to the button and the menu
+    const button = document.getElementById('btnHam');
+    const menu = document.getElementById('menu');
+
+    // Add click event listener to the button
+    button.addEventListener('click', function() {
+        // Toggle the visibility of the menu by toggling the 'visible' class
+        menu.classList.toggle('visible');
+    });
+</script>
+</body>
+</html>
