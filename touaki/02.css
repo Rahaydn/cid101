@@ -1,0 +1,78 @@
+.ribbon {
+    position: relative;
+    position: fixed;
+    top:60%;
+    right: 0;
+    width: 100px;
+    padding: 10px 0px 10px 10px;
+    background: #8E5421;
+    font-size: 12px;
+    z-index: 20;
+}
+.content-rib , .content{
+    display: flex;
+    align-items: center;
+}
+.content-rib a:hover , .content a:hover{
+    color: #0b0b0b;
+}
+.content a , .content-rib a{
+    color: #fff;
+    margin-right: 5px;
+    display: contents;
+}
+.content:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbon img {
+    width: 12px;
+    margin: 5px;
+}
+.ribbons {
+    position: relative;
+    position: fixed;
+    top:69%;
+    right: 0;
+    width: 100px;
+    padding: 8px 0px 8px 10px; 
+    background: #EF8B32;
+    font-size: 12px;
+    z-index: 20;
+}
+.content-rib:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #EF8B32 transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content-rib:after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #EF8B32 transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbons img {
+    width: 12px;
+    margin: 5px;
+}

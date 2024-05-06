@@ -40,13 +40,13 @@
                 <img src="photo/db.jpg" alt="首頁圖">
                 <h1 class="text">Delicious Coffee Shop</h1>
             </div>
-            <div class="ribbon">
+            <div class="ribbon" id="imgBoard">
                 <div class="content">
                     <a href="#">
                         <img src="photo/member1.png" alt="">會員登入</div>
                     </a>
                 </div>
-            <div class="ribbons">
+            <div class="ribbons" id="imgBoards">
                 <div class="content-rib">
                     <a href="#">
                         <img src="photo/datd.png" alt="">立即預約</div>
@@ -54,8 +54,11 @@
                 </div>
         </div>
         <div class="main">
-            <section class="menu-a">
+            <section class="slideshow-container">
+                    <div class="slideshow">
                     <img src="photo/Group 217.jpg" alt="菜單">
+                    <img src="photo/Group 217.jpg" alt="菜單">
+                    </div>
             </section>
             <section class="about">
             <div class="about-text">
@@ -146,7 +149,47 @@
         document.getElementById('btnHam').addEventListener('click', function () {
         var menu = document.getElementById('menu');
         menu.classList.toggle('show');
-    });
+        });
+        
     </script>
+    <script>
+        const ribbon = document.querySelector('.ribbon');
+        const ribbons = document.querySelector('.ribbons');
+        
+        function handleResize() {
+            if (window.innerWidth >= 768) {
+                ribbon.style.right = '0px';
+                ribbons.style.right = '0px';
+                ribbon.removeEventListener('mouseout', handleMouseOut);
+                ribbons.removeEventListener('mouseout', handleMouseOut);
+            } else {
+                ribbon.style.right = '-100px';
+                ribbons.style.right = '-100px';
+                ribbon.addEventListener('mouseout', handleMouseOut);
+                ribbons.addEventListener('mouseout', handleMouseOut);
+            }
+        }
+        function handleMouseOut() {
+            ribbon.style.right = '-100px';
+            ribbons.style.right = '-100px';
+        }
+        handleResize();
+        
+        window.addEventListener('resize', handleResize);
+        
+        ribbon.addEventListener('mouseover', () => {
+            ribbon.style.right = '0px';
+        });
+        
+        ribbon.addEventListener('mouseout', handleMouseOut);
+        
+        ribbons.addEventListener('mouseover', () => {
+            ribbons.style.right = '0px';
+        });
+        
+        ribbons.addEventListener('mouseout', handleMouseOut);
+        
+            </script>
+    
 </body>
 </html>

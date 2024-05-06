@@ -3,14 +3,23 @@ body{
     font-family: "Noto Sans TC", sans-serif;
     /* font-size:  clamp(32px, 4.6875vw, 82px); */
 }
+.head nav {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 .nav-log img{
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 0%;
+    z-index: 100;
+    width: 100px;
 }
 .head nav  ul li a{
     font-size: 18px;
-    margin: 0 10px;
     font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
     font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
     font-style: normal;
@@ -35,14 +44,7 @@ body{
 .head nav ul li a:hover span{
     translate: 0 -100%;/* 重新定義座標位址 */
 }
-.head nav {
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
+
 .head nav ul{
     display: flex;
     justify-content: space-between;
@@ -63,13 +65,39 @@ body{
     background-color: #F6F6F6;
 }
 .front-img {
-    width:100%;
-    max-width: 100%;
     position: relative;
 }
-img {
+.front-img img {
     width: 100%;
 }
+/* 輪播廣告 */
+.slideshow-container {
+    width: 100%;
+    overflow: hidden;
+}
+.slideshow {
+    display: flex;
+    animation: slideRight 10s linear infinite;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 50px)); 
+    }
+}
+.slideshow img {
+    width: 100%;
+    margin-right: 50px; 
+}
+
+.slideshow .slide {
+    position: relative; 
+    width: 500%;
+    animation: slideshow 15s infinite;
+}
+
 a{
     color: black;
     letter-spacing: 2px;
@@ -105,7 +133,7 @@ button {
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    right: 50px;
+    right: 0;
     margin-right: 10px;
 }
 button span {
@@ -116,48 +144,64 @@ button span {
 button {
 display: none;
 }
-@media screen and (max-width: 768px) {
-button {
-    display: flex;
-}
-.nav-log img{
-    position: unset;
-    width: 60px;
-}
-.head-nav nav{
-    justify-content: start;
-}
-.head-nav nav ul{
-    width: 80%;
-    display: block;
-    text-align: center;
-    padding-left: 0;
-}
-.head-nav nav ul li{
-    background-color: #fff;
-    border: 1px solid black;
-    justify-content: center;
-    padding: 20px 0;
-    
-}
-.head nav ul li a span::after{
-    display: none;
-}
-.head nav ul li a:hover span{
-    translate: 0;
+@media screen and (max-width: 767px) {
+    button {
+        display: flex;
+        cursor: pointer;
     }
-.head nav ul li:nth-child(3)::before{
-    content: '';
-    margin-left: 0;
+    .nav-log img{
+        position: unset;
+        width: 60px;
     }
-#menu{
+    .head-nav nav{
+        justify-content: start;
+        padding: 0;
+    }
+    .head-nav nav ul{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-left: 0;
+    }
+    .head-nav nav ul li{
+        background-color: #F6F6F6;
+        border: 1px solid #333;
+        justify-content: center;
+        padding: 10px 0;
+        
+    }
+    .head nav ul li a span::after{
         display: none;
-        position: absolute;
-        top: 70px;
-        right: 60px;
     }
-#menu.show {
-        display: block; 
+    .head nav ul li a:hover span{
+        translate: 0;
+        }
+    .head nav ul li:nth-child(3)::before{
+        content: '';
+        margin-left: 0;
+        }
+    .head nav ul li a {
+        width: 100%;
+        font-size: 16px;
+    }
+    .head nav ul li:hover{
+        background-color:#EF8B32 ;
+    }
+    #menu{
+            display: none;
+            position: absolute;
+            top: 61px;
+            right: 0px;
+        }
+    #menu.show {
+            display: block;
+            z-index: 10;
+        }
+    .text{
+        font-size: 30px;
+    }
+    .menu-a{
+        margin: 0;
     }
 }
 
@@ -171,6 +215,7 @@ button {
     padding: 10px 0px 10px 10px;
     background: #8E5421;
     font-size: 12px;
+    z-index: 20;
 }
 .content-rib , .content{
     display: flex;
@@ -190,7 +235,7 @@ button {
     border-style: solid;
     border-color: #8E5421 transparent;
     top: 0px ;
-    left: -35px;
+    left: -34px;
     border-width: 35px 0 0 35px;
 }
 .content:after {
@@ -199,7 +244,7 @@ button {
     border-style: solid;
     border-color: #8E5421 transparent;
     bottom: 0px;
-    left: -35px;
+    left: -34px;
     border-width: 0px 0px 35px 35px;
 }
 .ribbon img {
@@ -215,6 +260,7 @@ button {
     padding: 8px 0px 8px 10px; 
     background: #EF8B32;
     font-size: 12px;
+    z-index: 20;
 }
 .content-rib:before {
     content: "";
@@ -222,7 +268,7 @@ button {
     border-style: solid;
     border-color: #EF8B32 transparent;
     top: 0px ;
-    left: -35px;
+    left: -34px;
     border-width: 35px 0 0 35px;
 }
 .content-rib:after{
@@ -231,7 +277,7 @@ button {
     border-style: solid;
     border-color: #EF8B32 transparent;
     bottom: 0px;
-    left: -35px;
+    left: -34px;
     border-width: 0px 0px 35px 35px;
 }
 .ribbons img {
@@ -239,9 +285,6 @@ button {
     margin: 5px;
 }
 /* 關於我們 */
-.about {
-    display: flex;
-}
 .about-img img {
 width: 100%;
 height: auto;
@@ -250,7 +293,7 @@ height: auto;
 .about{
     display: flex;
     align-items: center;
-    margin-bottom: 150px;
+    margin: 100px 0;
 }
 .about-text{
     text-align: left;
@@ -267,8 +310,14 @@ h2 {
     letter-spacing: 10px;
     
 }
+@media screen and (max-width: 767px) {
+    h2{
+        font-size: 24px;
+    }
+}
 .lines {
-    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 2px;/* 文字間距 */
 }
 /* 會員優惠 */
 .member {
@@ -284,7 +333,7 @@ height: 14px;
     width: 700px;
     height: 400px;
     max-width: 100%;
-    object-fit: cover; /* 適應到其使用高度和寬度確定的方塊 */
+    object-fit: cover; /*適應到其使用高度和寬度確定的方塊 */
 }
 .member-text{
     margin-left: 100px ;
@@ -308,11 +357,11 @@ height: 14px;
 }
 .meal-text{
     width: 460px;
-    padding-right: 100px;
+    margin-right: 100px;
     
 }
-.meal-img{
-    height: 400px;
+.meal-img img{
+    width: 700px;
 }
 /* 頁尾 */
 .footer {

@@ -3,12 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/touaki/reset.css">
+    <script src="/touaki/jquery-3.7.1.js"></script>
     <style>
+    .ribbon {
+    position: relative;
+    position: fixed;
+    top:60%;
+    right: 0;
+    width: 100px;
+    padding: 10px 0px 10px 10px;
+    background: #8E5421;
+    font-size: 12px;
+    z-index: 20;
+}
+.content-rib , .content{
+    display: flex;
+    align-items: center;
+}
+.content-rib a:hover , .content a:hover{
+    color: #0b0b0b;
+}
+.content a , .content-rib a{
+    color: #fff;
+    margin-right: 5px;
+    display: contents;
+}
+.content:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #8E5421 transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbon img {
+    width: 12px;
+    margin: 5px;
+}
+.ribbons {
+    position: relative;
+    position: fixed;
+    top:69%;
+    right: 0;
+    width: 100px;
+    padding: 8px 0px 8px 10px; 
+    background: #EF8B32;
+    font-size: 12px;
+    z-index: 20;
+}
+.content-rib:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #EF8B32 transparent;
+    top: 0px ;
+    left: -35px;
+    border-width: 35px 0 0 35px;
+}
+.content-rib:after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #EF8B32 transparent;
+    bottom: 0px;
+    left: -35px;
+    border-width: 0px 0px 35px 35px;
+}
+.ribbons img {
+    width: 12px;
+    margin: 5px;
+}
+/* @media screen and (max-width: 767px){
+    .ribbon{
+        right:-100px;
+    }
+    .ribbons{
+        right:-100px;
+    }
+} */
     </style>
 </head>
+<body>
+    <div class="ribbon" >
+        <div class="content">
+            <a href="#">
+                <img src="photo/member1.png" alt="">會員登入</div>
+            </a>
+        </div>
+    <div class="ribbons" >
+        <div class="content-rib">
+            <a href="#">
+                <img src="photo/datd.png" alt="">立即預約</div>
+            </a>
+        </div>
+    <script>
+const ribbon = document.querySelector('.ribbon');
+const ribbons = document.querySelector('.ribbons');
 
+function handleResize() {
+    if (window.innerWidth >= 768) {
+        ribbon.style.right = '0px';
+        ribbons.style.right = '0px';
+        ribbon.removeEventListener('mouseout', handleMouseOut);
+        ribbons.removeEventListener('mouseout', handleMouseOut);
+    } else {
+        ribbon.style.right = '-100px';
+        ribbons.style.right = '-100px';
+        ribbon.addEventListener('mouseout', handleMouseOut);
+        ribbons.addEventListener('mouseout', handleMouseOut);
+    }
+}
+function handleMouseOut() {
+    ribbon.style.right = '-100px';
+    ribbons.style.right = '-100px';
+}
+handleResize();
 
+window.addEventListener('resize', handleResize);
+
+ribbon.addEventListener('mouseover', () => {
+    ribbon.style.right = '0px';
+});
+
+ribbon.addEventListener('mouseout', handleMouseOut);
+
+ribbons.addEventListener('mouseover', () => {
+    ribbons.style.right = '0px';
+});
+
+ribbons.addEventListener('mouseout', handleMouseOut);
+
+    </script>
 </body>
 </html>
 
