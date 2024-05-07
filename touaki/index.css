@@ -1,6 +1,7 @@
 body{
     background-image: url(photo/bgimg.jpg);
     font-family: "Noto Sans TC", sans-serif;
+    color: #333;
     /* font-size:  clamp(32px, 4.6875vw, 82px); */
 }
 .head nav {
@@ -99,7 +100,7 @@ body{
 }
 
 a{
-    color: black;
+    color: #333;
     letter-spacing: 2px;
     text-decoration: none;
 }
@@ -287,8 +288,6 @@ display: none;
 /* 關於我們 */
 .about-img img {
 width: 100%;
-height: auto;
-/* background-color: blue; */
 }
 .about{
     display: flex;
@@ -301,6 +300,34 @@ height: auto;
     position: relative;
     left:110px;
     top: 85px;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .about{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 10px;
+    }
+    .about-text{
+        text-align: left;
+        width: 100%;
+        position: unset;
+        margin-top: 20px;
+        order: 2;
+    }
+    .about-text h2{
+        font-size: 24px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .lines{
+        font-size: 14px;
+        margin-bottom: 20px;
+        padding-right: 10px;
+    }
+    
 }
 
 h2 {
@@ -329,7 +356,7 @@ h2 {
 width: 14px;
 height: 14px;
 }
-.member img {
+.member-img img{
     width: 700px;
     height: 400px;
     max-width: 100%;
@@ -349,6 +376,30 @@ height: 14px;
     margin-top:10px ;
     max-width: 100%;
 }
+@media screen and (max-width: 767px) {
+    .member {
+        display: block;
+        text-align: left;
+        margin:0 10px;
+    }
+    .member-img img{
+        width: 100%;
+        height: 200px;
+        object-position:0 55%;
+        margin-bottom: 20px;
+    }
+    .member-text{
+        margin: 0 10px ;
+    }
+    .member-text h2{
+        text-align: center;
+        padding: 0 0 20px;
+    }
+    .member-text p + span{
+        font-size: 14px;
+    }
+    
+}
 /* 用餐環境 */
 .meal {
     display: flex;
@@ -361,7 +412,30 @@ height: 14px;
     
 }
 .meal-img img{
-    width: 700px;
+    width: 100%;
+}
+@media screen and (max-width: 767px) {
+    .meal {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 10px;
+    }
+    .meal-text{
+        width: 100%;
+        margin-right: 100px;
+        order: 2;
+    }
+    .meal-text h2{
+        text-align: center;
+        padding: 0 0 20px;
+    }
+    .meal-text p{
+        font-size: 14px;
+    }
+    .meal-img img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 /* 頁尾 */
 .footer {
@@ -374,8 +448,14 @@ height: 14px;
     padding: 0;
 }
 .footer i{
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 10px;
+}
+.cafe {
+    order: 2;
+}
+.time{
+    order: 5;
 }
 .cafe i , .menu-link i , .reserve i {
     padding-top: 60px;
@@ -383,7 +463,7 @@ height: 14px;
 .footer > div {
     height: 40vh;
     padding: 40px;
-    border-right: 2px solid black;
+    border-right: 1px solid black;
     min-height: 200px;
 }
 .time img {
@@ -403,7 +483,108 @@ height: 14px;
     white-space: pre-line; /*合併空白序列，但是保留换行。*/
     margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 10px;
+        text-align: center;
+        position: relative;
+    }
+    .footer > div {
+        height: 60px;
+        padding: 0px;
+        border-right: 0;
+        border-bottom: 1px solid black;
+        min-height: 50px;
+    }
+    .footer .opentime{
+        height: 120px;
+        min-height: 100px;
+        border-bottom: 1px solid black;
+    }
+    .footer .time{
+        height: 110px;
+        min-height: 100px;
+    }
+    .opentime{
+        width: 100%;
+        display: block;
+        letter-spacing: 2px;
+        
+    }
+    .opentime i{
+        position: absolute;
+        top: 0;
+        left: 30px;
+    }
+    .opentime-text{
+        margin-left: 90px;
+        text-align: left;
+        
+    }
+    .opentime h2{
+        padding: 0;
+    }
+    .opentime p{
+        margin: 10px 0;
+        font-size: 14px;
+        white-space:unset; 
+    }
+    .menu-link a , .reserve a {
+        padding: 10px 33px;
+        display: flex;
+        justify-content: start;
+    }
+    .cafe a {
+        padding: 10px 30px;
+        display: flex;
+        justify-content: start;
+    }
+    .cafe i {
+        padding-top: 0px;
+        padding-right: 10px;
+    }
+    .menu-link{
+        border-top: 1px solid black;
+    }
+    .menu-link i , .reserve i {
+        padding-top: 0px;
+        padding-right: 20px;
+    }
+    .cafe {
+        order: unset;
+    }
+    .time{
+        font-size: 12px;
+        font-weight: 700;
+        width: 100%;
+        margin-top: 20px;
+        order: unset;
+        text-align: left;
+    }
+    .time img + p{
+        padding-top: 10px;
+    }
+    .time img {
+        padding-top: 0px;
+        padding-left: 130px;
+        padding-right: 10px;
+        float: left;
+    }
+    .time-nb{
+        font-size: 40px;
+        font-weight: 500;
+        font-family: "Red Hat Display";
+    }
+    .menu-link :hover , .reserve :hover , .cafe :hover{
+        background-color: #E4AD7C;
+    }
+}
+
+
 .footer-logo {
+    width: 100%;
     background-color: #1D2126;
     display: flex;
     position: relative;
@@ -427,7 +608,6 @@ height: 14px;
 .footer-logo >img {
     width: 95px;
     margin: 30px 120px 30px 200px;
-    max-width: 100%;
 }
 .account-icon{
     position: absolute;
@@ -437,4 +617,29 @@ height: 14px;
 .account-icon img{
     width: 15px;
     padding: 5px;
+}
+@media screen and (max-width: 767px) {
+    .footer-logo{
+        display: block;
+    }
+    .footer-logo >img {
+        width: 50px;
+        margin: 10px 10px ;
+        object-fit: contain;
+    }
+    .address{
+        margin-left: 10px;
+        margin-top: 0px;
+        letter-spacing: 1.5px;
+    }
+    .account-icon{
+        right: 0px;
+        bottom: 20px;
+    }
+    .logo-phone , .logo-map{
+        padding-bottom: 5px;
+    }
+    .footer-logo .address p{
+        letter-spacing: 1.5px;
+    }
 }

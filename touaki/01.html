@@ -6,145 +6,31 @@
     <link rel="stylesheet" href="/touaki/reset.css">
     <script src="/touaki/jquery-3.7.1.js"></script>
     <style>
-    .ribbon {
-    position: relative;
-    position: fixed;
-    top:60%;
-    right: 0;
-    width: 100px;
-    padding: 10px 0px 10px 10px;
-    background: #8E5421;
-    font-size: 12px;
-    z-index: 20;
-}
-.content-rib , .content{
+        .about {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* 将子元素垂直排列 */
 }
-.content-rib a:hover , .content a:hover{
-    color: #0b0b0b;
+
+.about-text,
+.about-img {
+    width: 100%; /* 使元素占据整个宽度 */
 }
-.content a , .content-rib a{
-    color: #fff;
-    margin-right: 5px;
-    display: contents;
+
+.about-text {
+    order: 2; /* 改变元素的顺序 */
 }
-.content:before {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-color: #8E5421 transparent;
-    top: 0px ;
-    left: -35px;
-    border-width: 35px 0 0 35px;
-}
-.content:after {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-color: #8E5421 transparent;
-    bottom: 0px;
-    left: -35px;
-    border-width: 0px 0px 35px 35px;
-}
-.ribbon img {
-    width: 12px;
-    margin: 5px;
-}
-.ribbons {
-    position: relative;
-    position: fixed;
-    top:69%;
-    right: 0;
-    width: 100px;
-    padding: 8px 0px 8px 10px; 
-    background: #EF8B32;
-    font-size: 12px;
-    z-index: 20;
-}
-.content-rib:before {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-color: #EF8B32 transparent;
-    top: 0px ;
-    left: -35px;
-    border-width: 35px 0 0 35px;
-}
-.content-rib:after{
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-color: #EF8B32 transparent;
-    bottom: 0px;
-    left: -35px;
-    border-width: 0px 0px 35px 35px;
-}
-.ribbons img {
-    width: 12px;
-    margin: 5px;
-}
-/* @media screen and (max-width: 767px){
-    .ribbon{
-        right:-100px;
-    }
-    .ribbons{
-        right:-100px;
-    }
-} */
+
     </style>
 </head>
 <body>
-    <div class="ribbon" >
-        <div class="content">
-            <a href="#">
-                <img src="photo/member1.png" alt="">會員登入</div>
-            </a>
+    <section class="about">
+        <div class="about-text">
+            <h2>關於我們</h2>
+            <p class="lines">我們會採用不同的烘焙方式和技術來烘焙咖啡豆，以呈現出不同的風味和口感。我們的烘焙師精通各種烘焙技術，以確保每一杯咖啡都能夠達到最佳的品質標準。</p>
         </div>
-    <div class="ribbons" >
-        <div class="content-rib">
-            <a href="#">
-                <img src="photo/datd.png" alt="">立即預約</div>
-            </a>
-        </div>
-    <script>
-const ribbon = document.querySelector('.ribbon');
-const ribbons = document.querySelector('.ribbons');
-
-function handleResize() {
-    if (window.innerWidth >= 768) {
-        ribbon.style.right = '0px';
-        ribbons.style.right = '0px';
-        ribbon.removeEventListener('mouseout', handleMouseOut);
-        ribbons.removeEventListener('mouseout', handleMouseOut);
-    } else {
-        ribbon.style.right = '-100px';
-        ribbons.style.right = '-100px';
-        ribbon.addEventListener('mouseout', handleMouseOut);
-        ribbons.addEventListener('mouseout', handleMouseOut);
-    }
-}
-function handleMouseOut() {
-    ribbon.style.right = '-100px';
-    ribbons.style.right = '-100px';
-}
-handleResize();
-
-window.addEventListener('resize', handleResize);
-
-ribbon.addEventListener('mouseover', () => {
-    ribbon.style.right = '0px';
-});
-
-ribbon.addEventListener('mouseout', handleMouseOut);
-
-ribbons.addEventListener('mouseover', () => {
-    ribbons.style.right = '0px';
-});
-
-ribbons.addEventListener('mouseout', handleMouseOut);
-
-    </script>
+        <div class="about-img">
+            <img src="photo/Group 178.png" alt="關於我們">
+        </div>   
 </body>
 </html>
 
