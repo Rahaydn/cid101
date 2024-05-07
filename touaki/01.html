@@ -6,31 +6,59 @@
     <link rel="stylesheet" href="/touaki/reset.css">
     <script src="/touaki/jquery-3.7.1.js"></script>
     <style>
-        .about {
-    display: flex;
-    flex-direction: column; /* 将子元素垂直排列 */
-}
-
-.about-text,
-.about-img {
-    width: 100%; /* 使元素占据整个宽度 */
-}
-
-.about-text {
-    order: 2; /* 改变元素的顺序 */
-}
+	.toTop-arrow {
+		width: 2.5rem;
+		height: 2.5rem;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		border-radius: 33%;
+		opacity: 0.6;
+		background: #000;
+		cursor: pointer;
+		position:fixed;
+		right: 1rem;
+		bottom: 1rem;
+		display: none;
+	}
+	.toTop-arrow::before, .toTop-arrow::after {
+		width: 18px;
+		height: 5px;
+		border-radius: 3px;
+		background: #f90;
+		position: absolute;
+		content: "";
+	}
+	.toTop-arrow::before {
+		transform: rotate(-45deg) translate(0, -50%);
+		left: 0.5rem;
+	}
+	.toTop-arrow::after {
+		transform: rotate(45deg) translate(0, -50%);
+		right: 0.5rem;
+	}
+	.toTop-arrow:focus {outline: none;}
 
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+        $(function(){
+            $('#BackTop').click(function(){ 
+                $('html,body').animate({scrollTop:0}, 333);
+            });
+            $(window).scroll(function() {
+                if ( $(this).scrollTop() > 300 ){
+                    $('#BackTop').fadeIn(222);
+                } else {
+                    $('#BackTop').stop().fadeOut(222);
+                }
+            }).scroll();
+        });
+      </script>
 </head>
 <body>
-    <section class="about">
-        <div class="about-text">
-            <h2>關於我們</h2>
-            <p class="lines">我們會採用不同的烘焙方式和技術來烘焙咖啡豆，以呈現出不同的風味和口感。我們的烘焙師精通各種烘焙技術，以確保每一杯咖啡都能夠達到最佳的品質標準。</p>
-        </div>
-        <div class="about-img">
-            <img src="photo/Group 178.png" alt="關於我們">
-        </div>   
+    <!-- <header class="bs-docs-nav navbar navbar-static-top" id="top"></header>
+    <a href="#top" class="back-to-top"> Back to top </a>   -->
 </body>
 </html>
 
