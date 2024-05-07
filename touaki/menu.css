@@ -272,7 +272,6 @@ p {
     position: absolute; 
     top: 50%;
     left: 35%; 
-    width: 30%;
     letter-spacing: 8px;
     font-family: "Condiment", sans-serif;
 }
@@ -286,6 +285,9 @@ p {
 .coffee-bg  ,.cake-bg , .sandwich{
     width: 100%;
     display: flex;
+}
+.coffee-bg  .flexslider,.cake-bg  .flexslider, .sandwich .flexslider{
+    margin-left: 200px;
 }
 .sandwich{
     padding: 60px 0px;
@@ -304,11 +306,11 @@ p {
 .menu-txt{
 line-height: 1.5;
 }
-.menu-txt h3 {
+.menu-txt h2 {
     font-size: 32px;
     font-weight: bold;
 }
-.menu-txt h4 {
+.menu-txt h3 {
     font-size: 24px;
 }
 
@@ -318,7 +320,7 @@ line-height: 1.5;
 .menu-txt   span {
     padding-left: 10px;
 }
-.menu-txt h4 :first-child {
+.menu-txt h3 :first-child {
     padding-left: 120px;
 }
 .menu-txt .red :first-child ,.menu-txt  .green :first-child{
@@ -342,6 +344,35 @@ line-height: 1.5;
 }
 .menu-txt .cake :first-child {
     padding-left: 96px;
+}
+@media screen and (max-width: 767px) {
+    .breadcrumb ul{
+        margin: 15px 0px 15px 100px ;
+    }
+    .news-img h1{
+        font-size: 40px;
+        color: #fff;
+        position: absolute; 
+        top: 50%;
+        left: 20%; 
+        letter-spacing: 8px;
+        font-family: "Condiment", sans-serif;
+    }
+    .coffee-bg  ,.cake-bg , .sandwich{
+        width: 100%;
+        display: block;
+    }
+    .coffee-bg  .flexslider,.cake-bg  .flexslider, .sandwich .flexslider{
+        margin-left: 50px;
+    }
+    .breadcrumb{
+        width: 400px;
+        margin: auto;
+    }
+    .menu-txt {
+        margin-top: 45px;
+        margin-left: 50px;
+    }
 }
 /* 頁尾 */
 .footer-logo {
