@@ -617,7 +617,7 @@ height: 14px;
     top: 0;
     left: 50%;
 }
-.footer-logo a:active{
+.footer-logo a:active ,.footer-logo a:hover{
     opacity: 0.5;
 }
 .logo-map ,.logo-phone{
