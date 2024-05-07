@@ -357,13 +357,10 @@ width: 14px;
 height: 14px;
 }
 .member-img img{
-    width: 700px;
-    height: 400px;
-    max-width: 100%;
-    object-fit: cover; /*適應到其使用高度和寬度確定的方塊 */
+    width: 500px;
 }
 .member-text{
-    margin-left: 100px ;
+    margin-left: 60px ;
 }
 .member-li li{
     vertical-align:middle
@@ -407,12 +404,13 @@ height: 14px;
     margin-bottom: 50px;
 }
 .meal-text{
-    width: 460px;
-    margin-right: 100px;
+    width: 500px;
+    margin-right: 60px;
     
 }
 .meal-img img{
-    width: 100%;
+    width: 500px;
+    object-fit: cover;
 }
 @media screen and (max-width: 767px) {
     .meal {
@@ -449,7 +447,7 @@ height: 14px;
 }
 .footer i{
     font-size: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .cafe {
     order: 2;
@@ -465,6 +463,9 @@ height: 14px;
     padding: 40px;
     border-right: 1px solid black;
     min-height: 200px;
+}
+.opentime h2{
+    padding-bottom: 0px;
 }
 .time img {
     width: 80px;
@@ -611,8 +612,8 @@ height: 14px;
 }
 .account-icon{
     position: absolute;
-    right: 300px;
-    bottom: 0px;
+    right: 200px;
+    bottom: 20px;
 }
 .account-icon img{
     width: 15px;
