@@ -286,8 +286,13 @@ display: none;
     margin: 5px;
 }
 /* 關於我們 */
+.about-img{
+    overflow: hidden;
+    width:100%;
+}
 .about-img img {
-width: 100%;
+    width: 100%;
+    
 }
 .about{
     display: flex;
@@ -308,11 +313,15 @@ width: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin: 20px 10px;
+        margin: 20px 0px;
+    }
+    .about-img{
+        overflow: hidden;
+        width:450px;
     }
     .about-text{
         text-align: left;
-        width: 100%;
+        width: 450px;
         position: unset;
         margin-top: 20px;
         order: 2;
