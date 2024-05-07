@@ -301,7 +301,7 @@ display: none;
 }
 .about-text{
     text-align: left;
-    width: 600px;
+    width: 47.31861%;
     position: relative;
     left:110px;
     top: 85px;
@@ -317,11 +317,11 @@ display: none;
     }
     .about-img{
         overflow: hidden;
-        width:400px;
+        width:100%;
     }
     .about-text{
         text-align: left;
-        width: 400px;
+        width: 100%;
         position: unset;
         margin-top: 20px;
         order: 2;
