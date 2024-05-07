@@ -317,11 +317,11 @@ display: none;
     }
     .about-img{
         overflow: hidden;
-        width:450px;
+        width:400px;
     }
     .about-text{
         text-align: left;
-        width: 450px;
+        width: 400px;
         position: unset;
         margin-top: 20px;
         order: 2;
@@ -650,6 +650,6 @@ height: 14px;
         padding-bottom: 5px;
     }
     .footer-logo .address p{
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
     }
 }
