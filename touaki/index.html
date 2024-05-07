@@ -156,14 +156,15 @@
 
 
 
-    <script>
+<script>
         document.getElementById('btnHam').addEventListener('click', function () {
         var menu = document.getElementById('menu');
         menu.classList.toggle('show');
         });
         
-    </script>
-    <script>
+</script>
+<script>
+    function executeBelow768() {
         const ribbon = document.querySelector('.ribbon');
         const ribbons = document.querySelector('.ribbons');
         
@@ -180,12 +181,13 @@
                 ribbons.addEventListener('mouseout', handleMouseOut);
             }
         }
+        
         function handleMouseOut() {
             ribbon.style.right = '-100px';
             ribbons.style.right = '-100px';
         }
-        handleResize();
         
+        handleResize();
         window.addEventListener('resize', handleResize);
         
         ribbon.addEventListener('mouseover', () => {
@@ -199,8 +201,15 @@
         });
         
         ribbons.addEventListener('mouseout', handleMouseOut);
-        
-            </script>
+    }
+
+    // 在768以下执行
+    if (window.innerWidth < 768) {
+        executeBelow768();
+    }
+</script>
+
+
     
 </body>
 </html>
