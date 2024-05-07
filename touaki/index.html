@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Condiment&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
     <header class="head" id="top">
@@ -66,11 +66,11 @@
                 <p class="lines">我們會採用不同的烘焙方式和技術來烘焙咖啡豆，以呈現出不同的風味和口感。我們的烘焙師精通各種烘焙技術，以確保每一杯咖啡都能夠達到最佳的品質標準。</p>
             </div>
             <div class="about-img">
-                <img src="photo/Group 178.png" alt="關於我們">
+                <img src="photo/Group 178.png" alt="關於我們" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in">
             </div>
             </section>   
             <section class="member">
-                <div class="member-img">
+                <div class="member-img" data-aos="fade-right" data-aos-duration="2000"data-aos-easing="ease-in">
                     <img src="photo/three.jpg" alt="會員">
                 </div>
                 <div class="member-text">
@@ -89,7 +89,7 @@
                     <h2>用餐環境</h2>
                     <p>環境和氛圍：我們的咖啡店營造出溫馨舒適的環境和氛圍，讓顧客可以放鬆身心受咖啡的美好時刻。無論是獨自一人閱讀書報，還是和朋友家人聚會聊天，我們的咖都是一個理想的場所。</p></div>  
                     <div class="meal-img">
-                        <img src="photo/cafe-restaurant-.jpg" alt="餐廳">
+                        <img src="photo/cafe-restaurant-.jpg" alt="餐廳" data-aos="fade-left" data-aos-duration="2000"data-aos-easing="ease-in">
                     </div>
                 </section>
             </div>  
@@ -204,6 +204,10 @@
 
     ribbons.addEventListener('mouseout', handleMouseOut);
 
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 
 </body>

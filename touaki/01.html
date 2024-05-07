@@ -4,105 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/touaki/reset.css">
-    <script src="/touaki/jquery-3.7.1.js"></script>
-    <style>
-	.toTop-arrow {
-		width: 2.5rem;
-		height: 2.5rem;
-		padding: 0;
-		margin: 0;
-		border: 0;
-		border-radius: 33%;
-		opacity: 0.6;
-		background: #000;
-		cursor: pointer;
-		position:fixed;
-		right: 1rem;
-		bottom: 1rem;
-		display: none;
-	}
-	.toTop-arrow::before, .toTop-arrow::after {
-		width: 18px;
-		height: 5px;
-		border-radius: 3px;
-		background: #f90;
-		position: absolute;
-		content: "";
-	}
-	.toTop-arrow::before {
-		transform: rotate(-45deg) translate(0, -50%);
-		left: 0.5rem;
-	}
-	.toTop-arrow::after {
-		transform: rotate(45deg) translate(0, -50%);
-		right: 0.5rem;
-	}
-	.toTop-arrow:focus {outline: none;}
-
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script>
-        $(function(){
-            $('#BackTop').click(function(){ 
-                $('html,body').animate({scrollTop:0}, 333);
-            });
-            $(window).scroll(function() {
-                if ( $(this).scrollTop() > 300 ){
-                    $('#BackTop').fadeIn(222);
-                } else {
-                    $('#BackTop').stop().fadeOut(222);
-                }
-            }).scroll();
-        });
-      </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <!-- <header class="bs-docs-nav navbar navbar-static-top" id="top"></header>
-    <a href="#top" class="back-to-top"> Back to top </a>   -->
-    <script>
-        function executeBelow768() {
-            const ribbon = document.querySelector('.ribbon');
-            const ribbons = document.querySelector('.ribbons');
-            
-            function handleResize() {
-                if (window.innerWidth >= 768) {
-                    ribbon.style.right = '0px';
-                    ribbons.style.right = '0px';
-                    ribbon.removeEventListener('mouseout', handleMouseOut);
-                    ribbons.removeEventListener('mouseout', handleMouseOut);
-                } else {
-                    ribbon.style.right = '-100px';
-                    ribbons.style.right = '-100px';
-                    ribbon.addEventListener('mouseout', handleMouseOut);
-                    ribbons.addEventListener('mouseout', handleMouseOut);
-                }
-            }
-            
-            function handleMouseOut() {
-                ribbon.style.right = '-100px';
-                ribbons.style.right = '-100px';
-            }
-            
-            handleResize();
-            window.addEventListener('resize', handleResize);
-            
-            ribbon.addEventListener('mouseover', () => {
-                ribbon.style.right = '0px';
-            });
-            
-            ribbon.addEventListener('mouseout', handleMouseOut);
-            
-            ribbons.addEventListener('mouseover', () => {
-                ribbons.style.right = '0px';
-            });
-            
-            ribbons.addEventListener('mouseout', handleMouseOut);
-        }
+
+    <div class=""
+    data-aos="fade-right"
+    data-aos-anchor="#triggerAnchor"
+    data-aos-anchor-placement="top-bottom">
+ Anchor
+</div>
+<div class="" id="triggerAnchor">Go</div>
+
+
+
+
+
     
-        // 在768以下执行
-        if (window.innerWidth < 768) {
-            executeBelow768();
-        }
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
 </body>
 </html>
