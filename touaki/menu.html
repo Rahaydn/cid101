@@ -9,18 +9,33 @@
     <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Condiment&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="head">
-        <nav class="head-nav">
-            <a href="https://rahaydn.github.io/cid101/project/news.html"><span data-txt="最新消息">最新消息</span></a>
-            <a href="https://rahaydn.github.io/cid101/project/menu.html"><span data-txt="門市菜單">門市菜單</span></a>
-            <a href="https://rahaydn.github.io/cid101/project/index.html" class="logo"><img src="photo/touaki (2).png" alt="logo"></a>
-            <a href="#"><span data-txt="咖啡專覽">咖啡專覽</span></a>
-            <a href="#"><span data-txt="常見問題">常見問題</span></a>
-        </nav>
-        <div class="news-img">
-            <img src="photo/aaa.png" alt="菜單">
+    <header class="head" id="top">
+        <div class="head-nav">
+            <nav>
+                <div class="nav-log"><a href="https://rahaydn.github.io/cid101/touaki/index.html" class="logo">
+                    <img src="photo/touaki (2).png" alt="logo"></a>
+                </div>
+                    <ul id="menu">
+                        <li><a href="https://rahaydn.github.io/cid101/project/news.html"><span data-txt="最新消息">最新消息</span></a>
+                        </li>
+                        <li><a href="https://rahaydn.github.io/cid101/project/menu.html"><span data-txt="門市菜單">門市菜單</span></a>
+                        </li>
+                        <li><a href="#"><span data-txt="咖啡專覽">咖啡專覽</span></a></li>
+                        <li><a href="#"><span data-txt="常見問題">常見問題</span></a></li>
+                    </ul>
+                    <button id="btnHam" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
         </div>
         <div class="ribbon">
             <div class="content">
@@ -34,20 +49,25 @@
                     <img src="photo/datd.png" alt="">立即預約</div>
                 </a>
             </div>
+    </header>
+        <div class="news-img">
+            <img src="photo/3a.jpg" alt="菜單">
+            <h1>TOUAKI&MENU</h1>
+        </div>
     </div>
     <div>
         <nav class="breadcrumb">
             <ul>
-                <li><a href="https://rahaydn.github.io/cid101/project/index.html">首頁</a></li>
+                <li><a href="https://rahaydn.github.io/cid101/touaki/index.html">首頁</a></li>
                 <li><a href="https://rahaydn.github.io/cid101/project/menu.html">菜單</a> </li> 
             </ul>
         </nav>
     <div class="coffee-bg">
         <div class="flexslider" style="width:350px; margin-left:200px;">
             <ul class="slides">
-                <li><img src="photo/le.jpg" alt="" width="350" height="250"></li>
-                <li><img src="photo//coffee.jpg" alt="" width="350" height="250"></li>
-                <li><img src="photo/mailk.jpg" alt="" width="350" height="250"></li>
+                <li><img src="photo/a1-fotor-2024050842814.jpg" alt="檸檬咖啡" width="350" height="250"></li>
+                <li><img src="photo/coffee.jpg" alt="美式咖啡" width="350" height="250"></li>
+                <li><img src="photo/mailk-fotor-2024050825742.jpg" alt="抹茶咖啡" width="350" height="250"></li>
             </ul>
         </div>
         <div class="menu-txt">
@@ -96,7 +116,7 @@
     <div class="cake-bg">
         <div class="flexslider" style="width:350px; margin-left:200px;">
             <ul class="slides">
-                <li><img src="photo/cake.jpg" alt="" width="350" height="250"></li>
+                <li><img src="photo/cake-fotor-2024050843226.jpg" alt="" width="350" height="250"></li>
                 <li><img src="photo//cake2.jpg" alt="" width="350" height="250"></li>
                 <li><img src="photo/cake3.jpg" alt="" width="350" height="250"></li>
             </ul>
@@ -117,19 +137,25 @@
         </div>
     </div>
     <div class="footer-logo">
+        <div class="top-btn">
+            <a href="#top" class="back-to-top">
+                <i class="fa-solid fa-arrow-up"></i><br>    
+                <span>Back to top</span> 
+            </a>
+        </div>
         <img src="photo/touaki.png" alt="logo">
         <div class="address">
-            <div class="logo-map"><img src="photo/phone.png" alt=""><p>328 桃園市觀音區莊三街8號</p></div>
-            <div class="logo-phone"><img src="photo/map.png" alt=""><p>03-1234567</p></div>
-            <p>圖片參考網址:https://www.lebrewlife.co/blogs/coffee/70257</p>
+            <div class="logo-phone"><img src="photo/phone.png" alt=""><p>03-1234567</p></div>
+            <div class="logo-map"><img src="photo/map.png" alt=""><p>328 桃園市觀音區莊三街8號</p></div>
             <p>Copyright © 2024 豆燒咖啡廳WiEdu CO.</p>
+            <p>圖片參考網址:https://www.lebrewlife.co/blogs/coffee/70257</p>
         </div>
         <div class="account-icon">
             <a href="#"><img src="photo/Vector (4).png" alt="line"></a>
             <a href="#"><img src="photo/Vector (2).png" alt="fb"></a>
             <a href="#"><img src="photo/Vector (3).png" alt="instagram"></a>
         </div>
-    </div>
+    </div> 
     <script>
         $(window).load(function() {
             $('.flexslider').flexslider({

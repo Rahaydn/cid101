@@ -1,22 +1,38 @@
 body{
     background-image: url(photo/bgimg.jpg);
     font-family: "Noto Sans TC", sans-serif;
+    color: #333;
+    /* font-size:  clamp(32px, 4.6875vw, 82px); */
 }
-.head-nav a{
+.head nav {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.nav-log img{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 100;
+    width: 100px;
+}
+.head nav  ul li a{
     font-size: 18px;
-    margin: 0 50px;
     font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
     font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
     font-style: normal;
     overflow: hidden;
     position: relative;
 }
-.head-nav a span {
+.head nav ul li a span {
     display: block;
     padding: 10px;
     transition: .4s;
 }
-.head-nav span::after{ 
+.head nav ul li a span::after{ 
     content: attr(data-txt);
     display: block;
     padding: 10px;
@@ -26,29 +42,123 @@ body{
     top: 100%;
     color: #3a3eca;
 }
-.head-nav a:hover span{
+.head nav ul li a:hover span{
     translate: 0 -100%;/* 重新定義座標位址 */
 }
-.head-nav {
-    background-color: #f6f6f6;
-    height: 100px;
-    padding: 15px;
+
+.head nav ul{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 100px;
 }
+.head nav li{
+    display: flex;
+    
+}
+.head nav ul li:nth-child(3)::before{
+    content: '';
+    margin-left: 100px;
+}
+.head-nav{
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6;
+}
+/* 漢堡 */
+
+button {
+    width: 40px;
+    height: 40px;
+    background-color: #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+button span {
+    width: 80%;
+    height: 2px;
+    background-color: #fff;
+}
+button {
+display: none;
+}
+@media screen and (max-width: 767px) {
+    button {
+        display: flex;
+        cursor: pointer;
+    }
+    .nav-log img{
+        position: unset;
+        width: 60px;
+    }
+    .head-nav nav{
+        justify-content: start;
+        padding: 0;
+    }
+    .head-nav nav ul{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-left: 0;
+    }
+    .head-nav nav ul li{
+        background-color: #F6F6F6;
+        border: 1px solid #333;
+        justify-content: center;
+        padding: 10px 0;
+        
+    }
+    .head nav ul li a span::after{
+        display: none;
+    }
+    .head nav ul li a:hover span{
+        translate: 0;
+        }
+    .head nav ul li:nth-child(3)::before{
+        content: '';
+        margin-left: 0;
+        }
+    .head nav ul li a {
+        width: 100%;
+        font-size: 16px;
+    }
+    .head nav ul li:hover , .head nav ul li:active{
+        background-color:#EF8B32 ;
+    }
+    #menu{
+            display: none;
+            position: absolute;
+            top: 61px;
+            right: 0px;
+        }
+    #menu.show {
+            display: block;
+            z-index: 10;
+        }
+    .text{
+        font-size: 30px;
+    }
+    .menu-a{
+        margin: 0;
+    }
+}
+/* 麵包屑 */
 .breadcrumb{
     width: 1200px;
     margin: auto;
 }
 .breadcrumb ul{
     display: flex;
-    margin: 15px;
+    margin: 15px 0px 15px 180px ;
 }
 .breadcrumb li{
     width: auto;
     border: none;
-    padding-block: 5px;
 }
 .breadcrumb ul li:not(:first-child)::before {
     content: "/";
@@ -73,15 +183,21 @@ p {
     letter-spacing: 2px;/* 文字間距 */
     
 }
+/* 絲帶 */
 .ribbon {
     position: relative;
     position: fixed;
     top:60%;
     right: 0;
     width: 100px;
-    padding: 10px 0px 10px 30px;
+    padding: 10px 0px 10px 10px;
     background: #8E5421;
     font-size: 12px;
+    z-index: 20;
+}
+.content-rib , .content{
+    display: flex;
+    align-items: center;
 }
 .content-rib a:hover , .content a:hover{
     color: #0b0b0b;
@@ -89,7 +205,7 @@ p {
 .content a , .content-rib a{
     color: #fff;
     margin-right: 5px;
-    text-decoration : none;
+    display: contents;
 }
 .content:before {
     content: "";
@@ -97,7 +213,7 @@ p {
     border-style: solid;
     border-color: #8E5421 transparent;
     top: 0px ;
-    left: -35px;
+    left: -34px;
     border-width: 35px 0 0 35px;
 }
 .content:after {
@@ -106,52 +222,65 @@ p {
     border-style: solid;
     border-color: #8E5421 transparent;
     bottom: 0px;
-    left: -35px;
+    left: -34px;
     border-width: 0px 0px 35px 35px;
 }
 .ribbon img {
     width: 12px;
-    margin-right: 10px;
-    padding-top: 5px;
+    margin: 5px;
 }
 .ribbons {
     position: relative;
     position: fixed;
-    top:67%;
+    top:69%;
     right: 0;
     width: 100px;
     padding: 8px 0px 8px 10px; 
-    background: #E4AD7C;
+    background: #EF8B32;
     font-size: 12px;
+    z-index: 20;
 }
 .content-rib:before {
     content: "";
     position: absolute;
     border-style: solid;
-    border-color: #E4AD7C transparent;
+    border-color: #EF8B32 transparent;
     top: 0px ;
-    left: -35px;
+    left: -34px;
     border-width: 35px 0 0 35px;
 }
 .content-rib:after{
     content: "";
     position: absolute;
     border-style: solid;
-    border-color: #E4AD7C transparent;
+    border-color: #EF8B32 transparent;
     bottom: 0px;
-    left: -35px;
+    left: -34px;
     border-width: 0px 0px 35px 35px;
 }
 .ribbons img {
     width: 12px;
-    margin-right: 10px;
-    padding-top: 5px;
+    margin: 5px;
 }
-
+.news-img img{
+    height: 500px;
+    object-fit: cover;
+}
+.news-img h1{
+    font-size: 64px;
+    color: #fff;
+    position: absolute; 
+    top: 50%;
+    left: 35%; 
+    width: 30%;
+    letter-spacing: 8px;
+    font-family: "Condiment", sans-serif;
+}
+/* 菜單 */
 .coffee-bg  ,.cake-bg {
     display: flex;
     width: 100%;
-    padding: 100px 0px;
+    padding: 60px 0px;
     background-image: url(photo/rectangle.png);
 }
 .coffee-bg  ,.cake-bg , .sandwich{
@@ -159,12 +288,7 @@ p {
     display: flex;
 }
 .sandwich{
-    padding-top: 60px;
-}
-.coffee-bg .flexslider .slider img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+    padding: 60px 0px;
 }
 .flexslider{
     border: 4px solid #fff0;
@@ -219,37 +343,84 @@ line-height: 1.5;
 .menu-txt .cake :first-child {
     padding-left: 96px;
 }
+/* 頁尾 */
 .footer-logo {
+    width: 100%;
     background-color: #1D2126;
     display: flex;
-    justify-content: center;
     position: relative;
+}
+.top-btn{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    height: 20px;
+}
+.footer-logo i{
+    padding-left: 35px;
+    font-size: 20px;
+    color: #fff;
+}
+.footer-logo a{
+    font-size: 12px;
+    color: #fff;
+    top: 0;
+    left: 50%;
+}
+.footer-logo a:active{
+    opacity: 0.5;
 }
 .logo-map ,.logo-phone{
     display: flex;
     align-items: center;
 }
 .footer-logo .address p{
-    padding-top: 10px;
     color: #fff;
-    font-size: 12px;
-    
+    font-size: 12px; 
+}
+.address{
+    margin-top: 40px;
 }
 .address img{
-    width: 25px;
-    padding: 10px;
+    width: 15px;
+    margin-right: 10px;
+    object-fit: contain;
 }
 .footer-logo >img {
     width: 95px;
-    margin: 30px;
-    max-width: 100%;
+    margin: 30px 120px 30px 200px;
 }
 .account-icon{
     position: absolute;
-    right: 300px;
-    bottom: 0px;
+    right: 200px;
+    bottom: 20px;
 }
 .account-icon img{
     width: 15px;
     padding: 5px;
+}
+@media screen and (max-width: 767px) {
+    .footer-logo{
+        display: block;
+    }
+    .footer-logo >img {
+        width: 50px;
+        margin: 10px 10px ;
+        object-fit: contain;
+    }
+    .address{
+        margin-left: 10px;
+        margin-top: 0px;
+        letter-spacing: 1.5px;
+    }
+    .account-icon{
+        right: 0px;
+        bottom: 20px;
+    }
+    .logo-phone , .logo-map{
+        padding-bottom: 5px;
+    }
+    .footer-logo .address p{
+        letter-spacing: 1px;
+    }
 }
