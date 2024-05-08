@@ -363,7 +363,8 @@ line-height: 1.5;
         display: block;
     }
     .coffee-bg  .flexslider,.cake-bg  .flexslider, .sandwich .flexslider{
-        margin-left: 50px;
+        margin-left: 20px;
+        
     }
     .breadcrumb{
         width: 400px;
@@ -371,7 +372,8 @@ line-height: 1.5;
     }
     .menu-txt {
         margin-top: 45px;
-        margin-left: 50px;
+        margin-left: 20px;
+
     }
 }
 /* 頁尾 */
