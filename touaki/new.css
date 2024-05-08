@@ -67,7 +67,7 @@ body{
 }
 /* 漢堡 */
 
-button {
+#btnHam {
     width: 40px;
     height: 40px;
     background-color: #888;
@@ -79,16 +79,16 @@ button {
     right: 0;
     margin-right: 10px;
 }
-button span {
+#btnHam span {
     width: 80%;
     height: 2px;
     background-color: #fff;
 }
-button {
+#btnHam {
 display: none;
 }
 @media screen and (max-width: 767px) {
-    button {
+    #btnHam {
         display: flex;
         cursor: pointer;
     }
@@ -226,10 +226,6 @@ display: none;
     width: 12px;
     margin: 5px;
 }
-.news-img img{
-    height: 500px;
-    object-fit: cover;
-}
 .news-img h1{
     font-size: 64px;
     color: #fff;
@@ -239,6 +235,7 @@ display: none;
     letter-spacing: 8px;
     font-family: "Condiment", sans-serif;
 }
+
 /* banner */
 .news-img  img{
     width: 100%;
@@ -270,6 +267,7 @@ p {
     width: 100%;
     padding: 10px;
     text-align: center;
+    
 }
 .btn button.active{
     background-color: #EF8B32;
@@ -281,6 +279,7 @@ p {
     border-radius: 20px;
     border: none;
     background-color: #F6F6F6;
+    cursor: pointer;
 }
 .content1{
     display: block;
@@ -297,6 +296,36 @@ h4 {
 }
 .event li a{
     line-height: 2.5em;
+}
+@media screen and (max-width: 767px) {
+    .breadcrumb{
+        width: 400px;
+        margin: auto;
+    }
+    .news-img img{
+        height: 200px;
+        
+    }
+    .news-img h1{
+        font-size: 50px;
+        color: #fff;
+        position: absolute; 
+        top: 20%;
+        left: 20%; 
+        letter-spacing: 8px;
+        font-family: "Condiment", sans-serif;
+    }
+    .news{
+        display: flex;
+        padding: 0;
+    }
+    .btn button{
+        width: 150px;
+        padding: 20px 15px ;
+        font-size: 18px;
+        margin:20px 0;
+    }
+
 }
 /* 麵包屑 */
 .breadcrumb{
