@@ -4,92 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            position: relative;
-        }        
-        button {
-        display: none;
-        }
-        button {
-            margin-left: 90%;
-            width: 40px;
-            height: 40px;
-            background-color: #888;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            position: absolute;
-            right: 0;
-            margin-right: 10px;
-        }
-        button span {
-            width: 80%;
-            height: 2px;
-            background-color: #fff;
-        }
 
-        #menu {
-            border: 1px solid pink; 
-            display: none; 
-            position: absolute; 
-            top: 40px; 
-            right: 0; 
-            background-color: white; 
-            padding: 10px; 
-        }
-
-        #menu.visible {
-            display: block;
-        }
-
-        #menu a {
-            display: block;
-            text-decoration: none; 
-            color: black; 
-            margin-bottom: 5px;
-        }
-
-
-        @media screen and (max-width: 768px) {
-        button {
-            display: flex;
-        }
-        }
-
-
-    </style>
 </head>
 <body>
-<button id="btnHam" class="">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
-<nav id="menu">
-    <ul>
-        <li><a href="">menu 1</a></li>
-        <li><a href="">menu 2</a></li>
-        <li><a href="">menu 3</a></li>
-        <li><a href="">menu 4</a></li>
-        <li><a href="">menu 5</a></li>
-        <li><a href="">menu 6</a></li>
-        <li><a href="">menu 7</a></li>
-        <li><a href="">menu 8</a></li>
-    </ul>
-</nav>
-
-<script>
-    // Get references to the button and the menu
-    const button = document.getElementById('btnHam');
-    const menu = document.getElementById('menu');
-
-    // Add click event listener to the button
-    button.addEventListener('click', function() {
-        // Toggle the visibility of the menu by toggling the 'visible' class
-        menu.classList.toggle('visible');
-    });
-</script>
+    <header class="head" id="top">
+        <div class="head-nav">
+            <nav>
+                <div class="nav-log"><a href="https://rahaydn.github.io/cid101/touaki/index.html" class="logo">
+                    <img src="photo/touaki (2).png" alt="logo"></a>
+                </div>
+                    <ul id="menu">
+                        <li><a href="https://rahaydn.github.io/cid101/project/news.html"><span data-txt="最新消息">最新消息</span></a>
+                        </li>
+                        <li><a href="https://rahaydn.github.io/cid101/touaki/menu.html"><span data-txt="門市菜單">門市菜單</span></a>
+                        </li>
+                        <li><a href="#"><span data-txt="咖啡專覽">咖啡專覽</span></a></li>
+                        <li><a href="#"><span data-txt="常見問題">常見問題</span></a></li>
+                    </ul>
+                    <button id="btnHam">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+        </div>
+        <div class="ribbon">
+            <div class="content">
+                <a href="#">
+                    <img src="photo/member1.png" alt="">會員登入</div>
+                </a>
+            </div>
+        <div class="ribbons">
+            <div class="content-rib">
+                <a href="#">
+                    <img src="photo/datd.png" alt="">立即預約</div>
+                </a>
+            </div>
+    </header>
+    <div>
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="https://rahaydn.github.io/cid101/project/index.html">首頁</a></li>
+                <li><a href="https://rahaydn.github.io/cid101/project/news.html">最新消息</a> </li> 
+            </ul>
+        </nav>
+    </div>
+    <div class="footer-logo">
+        <div class="top-btn">
+            <a href="#top" class="back-to-top">
+                <i class="fa-solid fa-arrow-up"></i><br>    
+                <span>Back to top</span> 
+            </a>
+        </div>
+        <img src="photo/touaki.png" alt="logo">
+        <div class="address">
+            <div class="logo-phone"><img src="photo/phone.png" alt=""><p>03-1234567</p></div>
+            <div class="logo-map"><img src="photo/map.png" alt=""><p>328 桃園市觀音區莊三街8號</p></div>
+            <p>Copyright © 2024 豆燒咖啡廳WiEdu CO.</p>
+            <p>圖片參考網址:https://www.lebrewlife.co/blogs/coffee/70257</p>
+        </div>
+        <div class="account-icon">
+            <a href="#"><img src="photo/Vector (4).png" alt="line"></a>
+            <a href="#"><img src="photo/Vector (2).png" alt="fb"></a>
+            <a href="#"><img src="photo/Vector (3).png" alt="instagram"></a>
+        </div>
+    </div>
+    <script src="new.js"></script> 
 </body>
 </html>
