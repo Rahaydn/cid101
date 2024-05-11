@@ -1,10 +1,8 @@
 body{
     background-image: url(photo/bgimg.jpg);
-    
-}
-body p {
-    font-family:"Noto Sans TC", sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
     color: #333;
+    /* font-size:  clamp(32px, 4.6875vw, 82px); */
 }
 .head nav {
     width: 100%;
@@ -69,7 +67,7 @@ body p {
 }
 /* 漢堡 */
 
-#btnHam {
+button {
     width: 40px;
     height: 40px;
     background-color: #888;
@@ -81,16 +79,16 @@ body p {
     right: 0;
     margin-right: 10px;
 }
-#btnHam span {
+button span {
     width: 80%;
     height: 2px;
     background-color: #fff;
 }
-#btnHam {
+button {
 display: none;
 }
 @media screen and (max-width: 767px) {
-    #btnHam {
+    button {
         display: flex;
         cursor: pointer;
     }
@@ -148,6 +146,41 @@ display: none;
     .menu-a{
         margin: 0;
     }
+}
+/* 麵包屑 */
+.breadcrumb{
+    width: 100%;
+}
+.breadcrumb ul{
+    display: flex;
+    margin: 15px 0px 15px 220px ;
+}
+.breadcrumb li{
+    width: auto;
+    border: none;
+}
+.breadcrumb ul li:not(:first-child)::before {
+    content: "/";
+    margin: 0px 8px;
+    font-weight: 600;
+}
+.front-img {
+    width:100%;
+    max-width: 100%;
+    position: relative;
+}
+img {
+    width: 100%;
+}
+a{
+    color: black;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+p {
+    line-height: 24px;
+    letter-spacing: 2px;/* 文字間距 */
+    
 }
 /* 絲帶 */
 .ribbon {
@@ -227,126 +260,6 @@ display: none;
 .ribbons img {
     width: 12px;
     margin: 5px;
-}
-.news-img h1{
-    font-size: 64px;
-    color: #fff;
-    position: absolute; 
-    top: 20%;
-    left: 43%; 
-    letter-spacing: 8px;
-    font-family: "Condiment", sans-serif;
-}
-
-/* banner */
-.news-img{
-    position: relative;
-}
-.news-img  img{
-    width: 100%;
-    height: 500px;
-    
-}
-a{
-    color: black;
-    letter-spacing: 2px;
-    text-decoration: none;
-}
-p {
-    line-height: 15px;
-    letter-spacing: 2px;/* 文字間距 */  
-}
-.news{
-    padding: 0 120px;
-    margin-bottom: 50px;
-}
-.txt {
-    font-size: 64px;
-    color: #fff;
-    position: absolute; 
-    top: 30%;
-    left: 40%; 
-}
-.btn {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    
-}
-.btn button{
-    padding: 20px 15px ;
-    font-size: 18px;
-    margin: 0 20px;
-    border-radius: 20px;
-    border: none;
-    background-color: #F6F6F6;
-    cursor: pointer;
-}
-.content1{
-    display: block;
-    text-align: left;
-}
-.event li {
-    width: 100%;
-    padding: 10px 0px;
-    border-bottom: 1px solid #000;
-}
-h4 {
-    font-size: 18px;
-    font-weight: 600;
-}
-.event li a{
-    line-height: 2.5em;
-}
-@media screen and (max-width: 767px) {
-    .news-img img{
-        height: 200px;
-        
-    }
-    .news-img h1{
-        font-size: 50px;
-        color: #fff;
-        position: absolute; 
-        top: 20%;
-        left: 20%; 
-        letter-spacing: 8px;
-        font-family: "Condiment", sans-serif;
-    }
-    .news{
-        display: flex;
-        padding: 0;
-    }
-    .btn{
-        width: 24%;
-        padding-left: 10px ;
-    }
-    .btn button {
-        margin: 0;
-        margin-bottom: 20px;
-    }
-
-}
-/* 麵包屑 */
-.breadcrumb{
-    width: 1200px;
-    margin: auto;
-}
-.breadcrumb ul{
-    display: flex;
-    margin: 15px;
-}
-.breadcrumb li{
-    width: auto;
-    border: none;
-    padding-block: 5px;
-}
-.breadcrumb li a{
-    font-family: unset;
-}
-.breadcrumb ul li:not(:first-child)::before {
-    content: "/";
-    margin: 0px 8px;
-    font-weight: 600;
 }
 /* 頁尾 */
 .footer-logo {
@@ -437,4 +350,8 @@ h4 {
     .footer-logo .address p{
         letter-spacing: 1px;
     }
+    .top-btn{
+        left: 40%;
+    }
 }
+

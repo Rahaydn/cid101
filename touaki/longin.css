@@ -408,7 +408,7 @@ display: none;
 .top-btn{
     position: absolute;
     top: 5%;
-    left: 40%;
+    left: 50%;
     height: 20px;
 }
 .footer-logo i{
@@ -486,5 +486,8 @@ display: none;
     }
     .footer-logo .address p{
         letter-spacing: 1px;
+    }
+    .top-btn{
+        left: 40%;
     }
 }

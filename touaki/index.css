@@ -71,6 +71,7 @@ body{
 }
 .front-img img {
     width: 100%;
+    image-rendering: auto;
 }
 /* 輪播廣告 */
 .slideshow-container {
@@ -604,7 +605,7 @@ height: 14px;
 .top-btn{
     position: absolute;
     top: 5%;
-    left: 40%;
+    left: 50%;
     height: 20px;
 }
 .footer-logo i{
@@ -682,5 +683,8 @@ height: 14px;
     }
     .footer-logo .address p{
         letter-spacing: 1px;
+    }
+    .top-btn{
+        left: 40%;
     }
 }

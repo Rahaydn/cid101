@@ -1,3 +1,155 @@
+body{
+    background-image: url(photo/bgimg.jpg);
+    
+}
+body p {
+    font-family:"Noto Sans TC", sans-serif;
+    color: #333;
+}
+.head nav {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.nav-log img{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 100;
+    width: 100px;
+}
+.head nav  ul li a{
+    font-size: 18px;
+    font-optical-sizing: auto; /* 控制字體在不同設備上呈現效果 */
+    font-weight: 700; /* Font-weight屬性可以設定字體的粗細變化 */
+    font-style: normal;
+    overflow: hidden;
+    position: relative;
+}
+.head nav ul li a span {
+    display: block;
+    padding: 10px;
+    transition: .4s;
+}
+.head nav ul li a span::after{ 
+    content: attr(data-txt);
+    display: block;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    color: #3a3eca;
+}
+.head nav ul li a:hover span{
+    translate: 0 -100%;/* 重新定義座標位址 */
+}
+
+.head nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 100px;
+}
+.head nav li{
+    display: flex;
+    
+}
+.head nav ul li:nth-child(3)::before{
+    content: '';
+    margin-left: 100px;
+}
+.head-nav{
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6;
+}
+/* 漢堡 */
+
+#btnHam {
+    width: 40px;
+    height: 40px;
+    background-color: #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+#btnHam span {
+    width: 80%;
+    height: 2px;
+    background-color: #fff;
+}
+#btnHam {
+display: none;
+}
+@media screen and (max-width: 767px) {
+    #btnHam {
+        display: flex;
+        cursor: pointer;
+    }
+    .nav-log img{
+        position: unset;
+        width: 60px;
+    }
+    .head-nav nav{
+        justify-content: start;
+        padding: 0;
+    }
+    .head-nav nav ul{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-left: 0;
+    }
+    .head-nav nav ul li{
+        background-color: #F6F6F6;
+        border: 1px solid #333;
+        justify-content: center;
+        padding: 10px 0;
+        
+    }
+    .head nav ul li a span::after{
+        display: none;
+    }
+    .head nav ul li a:hover span{
+        translate: 0;
+        }
+    .head nav ul li:nth-child(3)::before{
+        content: '';
+        margin-left: 0;
+        }
+    .head nav ul li a {
+        width: 100%;
+        font-size: 16px;
+    }
+    .head nav ul li:hover , .head nav ul li:active{
+        background-color:#EF8B32 ;
+    }
+    #menu{
+            display: none;
+            position: absolute;
+            top: 61px;
+            right: 0px;
+        }
+    #menu.show {
+            display: block;
+            z-index: 10;
+        }
+    .text{
+        font-size: 30px;
+    }
+    .menu-a{
+        margin: 0;
+    }
+}
+/* 絲帶 */
 .ribbon {
     position: relative;
     position: fixed;
@@ -27,7 +179,7 @@
     border-style: solid;
     border-color: #8E5421 transparent;
     top: 0px ;
-    left: -35px;
+    left: -34px;
     border-width: 35px 0 0 35px;
 }
 .content:after {
@@ -36,7 +188,7 @@
     border-style: solid;
     border-color: #8E5421 transparent;
     bottom: 0px;
-    left: -35px;
+    left: -34px;
     border-width: 0px 0px 35px 35px;
 }
 .ribbon img {
@@ -60,7 +212,7 @@
     border-style: solid;
     border-color: #EF8B32 transparent;
     top: 0px ;
-    left: -35px;
+    left: -34px;
     border-width: 35px 0 0 35px;
 }
 .content-rib:after{
@@ -69,10 +221,138 @@
     border-style: solid;
     border-color: #EF8B32 transparent;
     bottom: 0px;
-    left: -35px;
+    left: -34px;
     border-width: 0px 0px 35px 35px;
 }
 .ribbons img {
     width: 12px;
     margin: 5px;
 }
+.news-img h1{
+    font-size: 64px;
+    color: #fff;
+    position: absolute; 
+    top: 25%;
+    left: 43%; 
+    letter-spacing: 8px;
+    font-family: "Condiment", sans-serif;
+}
+
+
+
+/* 麵包屑 */
+.breadcrumb{
+    width: 1200px;
+    margin: auto;
+}
+.breadcrumb ul{
+    display: flex;
+    margin: 15px;
+}
+.breadcrumb li{
+    width: auto;
+    border: none;
+    padding-block: 5px;
+}
+.breadcrumb li a{
+    font-family: unset;
+}
+.breadcrumb ul li:not(:first-child)::before {
+    content: "/";
+    margin: 0px 8px;
+    font-weight: 600;
+}
+/* 頁尾 */
+.footer-logo {
+    width: 100%;
+    background-color: #1D2126;
+    display: flex;
+    position: relative;
+}
+.top-btn{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    height: 20px;
+}
+.footer-logo i{
+    padding-left: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+.footer-logo a{
+    font-size: 12px;
+    color: #fff;
+    top: 0;
+    left: 50%;
+}
+.footer-logo a:active ,.footer-logo a:hover{
+    opacity: 0.5;
+}
+.logo-map ,.logo-phone{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.footer-logo .address p{
+    color: #fff;
+    font-size: 12px; 
+}
+.address{
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.address p{
+    line-height: 2;
+}
+.address img{
+    width: 15px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+.logo-img img{
+    width: 100px;
+    margin: 90px 120px 0px 200px;
+}
+.account-icon{
+    position: absolute;
+    right: 200px;
+    bottom: 20px;
+}
+.account-icon img{
+    width: 15px;
+    padding: 5px;
+}
+@media screen and (max-width: 767px) {
+    .footer-logo{
+        display: block;
+    }
+    .logo-img img {
+        width: 50px;
+        margin: 50px 10px 10px;
+        object-fit: contain;
+    }
+    .address{
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        letter-spacing: 1.5px;
+    }
+    .address p:nth-child(4){
+        padding-bottom: 20px;
+    }
+    .account-icon{
+        right: 0px;
+        bottom: 40px;
+    }
+    .logo-phone , .logo-map{
+        padding-bottom: 5px;
+    }
+    .footer-logo .address p{
+        letter-spacing: 1px;
+    }
+    .top-btn{
+        left: 40%;
+    }
+}
+
