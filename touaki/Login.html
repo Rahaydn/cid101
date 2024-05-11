@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>會員登入</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="longin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -51,17 +54,28 @@
     </div>
     <div class="LoginContainer">
         <div class="ParagraphBody">
-            <div class="Parag-img"></div>
+            <div class="Parag-img"><img src="/touaki/photo/e6f.jpg" alt=""></div>
+            <form action="">
             <div class="FlowContainer">
+                <h1>會員登入</h1>
                 <div class="FormTitle">您的手機號碼就是登入帳號</div>
-                <form action="">
+                <form>
                     <div class="PhoneWrapper">
-                        <input type="tel" name="cellPhone" placeholder="輸入手機號碼">
+                        <input type="tel" name="cellPhone" placeholder="輸入手機號碼" maxlength="10" class="box">
+                        <i class="fa-solid fa-mobile-screen"></i>
                     </div>
-                    <div class="BtnContainer">
-                        <button class="button__Button">登入/註冊</button>
-                    </div>
+                        <button class="buttonlongin">登入/註冊</button>
                 </form>
+                <div class="line-span"><span>或</span></div>
+                <button class="fackbook">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span>使用 Facebook 帳號登入</span>
+                </button>
+                <button class="line">
+                    <i class="fa-brands fa-line"></i>
+                    <span>使用 LINE 帳號登入</span>
+                </button>
+                
             </div>
         </div>
     </div>
@@ -73,7 +87,9 @@
                 <span>Back to top</span> 
             </a>
         </div>
-        <img src="photo/touaki.png" alt="logo">
+        <div class="logo-img">
+            <img src="photo/touaki.png" alt="logo">
+        </div>
         <div class="address">
             <div class="logo-phone"><img src="photo/phone.png" alt=""><p>03-1234567</p></div>
             <div class="logo-map"><img src="photo/map.png" alt=""><p>328 桃園市觀音區莊三街8號</p></div>

@@ -604,11 +604,11 @@ height: 14px;
 .top-btn{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 40%;
     height: 20px;
 }
 .footer-logo i{
-    padding-left: 35px;
+    padding-left: 32px;
     font-size: 20px;
     color: #fff;
 }
@@ -624,22 +624,27 @@ height: 14px;
 .logo-map ,.logo-phone{
     display: flex;
     align-items: center;
+    padding-bottom: 10px;
 }
 .footer-logo .address p{
     color: #fff;
     font-size: 12px; 
 }
 .address{
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.address p{
+    line-height: 2;
 }
 .address img{
     width: 15px;
     margin-right: 10px;
     object-fit: contain;
 }
-.footer-logo >img {
-    width: 95px;
-    margin: 30px 120px 30px 200px;
+.logo-img img{
+    width: 100px;
+    margin: 90px 120px 0px 200px;
 }
 .account-icon{
     position: absolute;
@@ -654,19 +659,23 @@ height: 14px;
     .footer-logo{
         display: block;
     }
-    .footer-logo >img {
+    .logo-img img {
         width: 50px;
-        margin: 10px 10px ;
+        margin: 50px 10px 10px;
         object-fit: contain;
     }
     .address{
         margin-left: 10px;
         margin-top: 0px;
+        margin-bottom: 0px;
         letter-spacing: 1.5px;
+    }
+    .address p:nth-child(4){
+        padding-bottom: 20px;
     }
     .account-icon{
         right: 0px;
-        bottom: 20px;
+        bottom: 40px;
     }
     .logo-phone , .logo-map{
         padding-bottom: 5px;

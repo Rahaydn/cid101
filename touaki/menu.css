@@ -149,12 +149,11 @@ display: none;
 }
 /* 麵包屑 */
 .breadcrumb{
-    width: 1200px;
-    margin: auto;
+    width: 100%;
 }
 .breadcrumb ul{
     display: flex;
-    margin: 15px 0px 15px 180px ;
+    margin: 15px 0px 15px 220px ;
 }
 .breadcrumb li{
     width: auto;
@@ -262,35 +261,32 @@ p {
     width: 12px;
     margin: 5px;
 }
+/* banner */
 .news-img img{
     height: 500px;
     object-fit: cover;
+}
+.news-img{
+    position: relative;
 }
 .news-img h1{
     font-size: 64px;
     color: #fff;
     position: absolute; 
     top: 50%;
-    left: 35%; 
+    right: 30%;
     letter-spacing: 8px;
     font-family: "Condiment", sans-serif;
 }
 /* 菜單 */
 .coffee-bg  ,.cake-bg {
-    display: flex;
-    width: 100%;
-    padding: 60px 0px;
     background-image: url(photo/rectangle.png);
 }
 .coffee-bg  ,.cake-bg , .sandwich{
-    width: 100%;
     display: flex;
-}
-.coffee-bg  .flexslider,.cake-bg  .flexslider, .sandwich .flexslider{
-    margin-left: 200px;
-}
-.sandwich{
+    width: 100%;
     padding: 60px 0px;
+    justify-content: center;
 }
 .flexslider{
     border: 4px solid #fff0;
@@ -304,7 +300,15 @@ p {
     bottom: 30px;
 }
 .menu-txt{
-line-height: 1.5;
+    height: auto;
+    line-height: 3em;
+    margin-left: 100px;
+}
+.text-cake{
+    margin-right: 80px;
+}
+.text-cafe{
+    margin-right: 40px;
 }
 .menu-txt h2 {
     font-size: 32px;
@@ -326,10 +330,6 @@ line-height: 1.5;
 .menu-txt .red :first-child ,.menu-txt  .green :first-child{
     padding-left: 142px;
 }
-.menu-txt {
-    margin-top: 45px;
-    margin-left: 100px;
-}
 .menu-txt .latte :first-child {
     padding-left: 150px;
 }
@@ -350,30 +350,19 @@ line-height: 1.5;
         margin: 15px 0px 15px 100px ;
     }
     .news-img h1{
-        font-size: 40px;
+        font-size: 30px;
         color: #fff;
         position: absolute; 
         top: 50%;
-        left: 20%; 
+        left: 30%; 
         letter-spacing: 8px;
         font-family: "Condiment", sans-serif;
     }
+    .menu-txt{
+        margin-left: 0;
+    }
     .coffee-bg  ,.cake-bg , .sandwich{
-        width: 100%;
-        display: block;
-    }
-    .coffee-bg  .flexslider,.cake-bg  .flexslider, .sandwich .flexslider{
-        margin-left: 20px;
-        
-    }
-    .breadcrumb{
-        width: 400px;
-        margin: auto;
-    }
-    .menu-txt {
-        margin-top: 45px;
-        margin-left: 20px;
-
+        display: inline-grid;
     }
 }
 /* 頁尾 */
@@ -386,11 +375,11 @@ line-height: 1.5;
 .top-btn{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 40%;
     height: 20px;
 }
 .footer-logo i{
-    padding-left: 35px;
+    padding-left: 32px;
     font-size: 20px;
     color: #fff;
 }
@@ -400,28 +389,33 @@ line-height: 1.5;
     top: 0;
     left: 50%;
 }
-.footer-logo a:active{
+.footer-logo a:active ,.footer-logo a:hover{
     opacity: 0.5;
 }
 .logo-map ,.logo-phone{
     display: flex;
     align-items: center;
+    padding-bottom: 10px;
 }
 .footer-logo .address p{
     color: #fff;
     font-size: 12px; 
 }
 .address{
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.address p{
+    line-height: 2;
 }
 .address img{
     width: 15px;
     margin-right: 10px;
     object-fit: contain;
 }
-.footer-logo >img {
-    width: 95px;
-    margin: 30px 120px 30px 200px;
+.logo-img img{
+    width: 100px;
+    margin: 90px 120px 0px 200px;
 }
 .account-icon{
     position: absolute;
@@ -436,19 +430,23 @@ line-height: 1.5;
     .footer-logo{
         display: block;
     }
-    .footer-logo >img {
+    .logo-img img {
         width: 50px;
-        margin: 10px 10px ;
+        margin: 50px 10px 10px;
         object-fit: contain;
     }
     .address{
         margin-left: 10px;
         margin-top: 0px;
+        margin-bottom: 0px;
         letter-spacing: 1.5px;
+    }
+    .address p:nth-child(4){
+        padding-bottom: 20px;
     }
     .account-icon{
         right: 0px;
-        bottom: 20px;
+        bottom: 40px;
     }
     .logo-phone , .logo-map{
         padding-bottom: 5px;
