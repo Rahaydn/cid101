@@ -67,7 +67,7 @@ body{
 }
 /* 漢堡 */
 
-button {
+#btnHam {
     width: 40px;
     height: 40px;
     background-color: #888;
@@ -79,16 +79,16 @@ button {
     right: 0;
     margin-right: 10px;
 }
-button span {
+#btnHam span {
     width: 80%;
     height: 2px;
     background-color: #fff;
 }
-button {
+#btnHam {
 display: none;
 }
 @media screen and (max-width: 767px) {
-    button {
+    #btnHam {
         display: flex;
         cursor: pointer;
     }
@@ -261,6 +261,60 @@ p {
     width: 12px;
     margin: 5px;
 }
+/* 內容 */
+.ctn{
+    margin-left: 50px;
+}
+h1{
+    font-size: 32px;
+    padding-bottom: 20px;
+    font-weight: 600px;
+}
+.ctn-warp{
+    width: 1170px;
+    height: 800px;
+    align-items: center;
+}
+.accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 30px 18px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 16px;
+    }
+  /* 设置点击和鼠标移到选项上面时（悬停）的样式 */
+    .active, .accordion:hover {
+    background-color: #EF8B32;
+    }
+
+  /* 为手风琴面板设计样式。 默认隐藏 */
+    .panel {
+    padding: 0px 18px;
+    background-color: #eee;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    }
+
+  /* 设置 +、- 标志 */
+    .accordion:after {
+    content: '\002B';  /* Unicode 字符 + 号 */
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    }
+
+    .active:after { 
+    content: "\2212";  /* Unicode 字符 - 号 */
+}
+
 /* 頁尾 */
 .footer-logo {
     width: 100%;

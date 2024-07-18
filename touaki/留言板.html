@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員留言板</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+#loginForm, #messageBoard {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type="text"], input[type="password"], textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#messages {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+  </style>
+</head>
+<body>
+  <div id="loginForm">
+    <input type="text" id="username" placeholder="請輸入用戶名">
+    <input type="password" id="password" placeholder="請輸入密碼">
+    <button onclick="login()">登入</button>
+  </div>
+  <div id="messageBoard" style="display: none;">
+    <h2>歡迎, <span id="loggedInUser"></span>!</h2>
+    <textarea id="messageInput" placeholder="輸入留言..."></textarea>
+    <button onclick="postMessage()">發送留言</button>
+    <div id="messages"></div>
+  </div>
+
+  <script>
+let loggedInUser = null;
+
+function login() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  // 在實際應用中，你需要將用戶名和密碼發送到後端進行驗證
+  // 這裡只是示範，不包含真實的用戶驗證邏輯
+  if (username === 'user' && password === 'password') {
+    loggedInUser = username;
+    document.getElementById('loggedInUser').textContent = username;
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('messageBoard').style.display = 'block';
+    fetchMessages();
+  } else {
+    alert('登入失敗，請檢查用戶名和密碼');
+  }
+}
+
+function postMessage() {
+  const message = document.getElementById('messageInput').value;
+
+  // 在實際應用中，你需要將留言發送到後端進行儲存
+  // 這裡只是示範，不包含真實的留言儲存邏輯
+  const messageElement = document.createElement('div');
+  messageElement.className = 'message';
+  messageElement.textContent = `${loggedInUser}: ${message}`;
+  document.getElementById('messages').appendChild(messageElement);
+}
+
+function fetchMessages() {
+  // 在實際應用中，你需要從後端獲取留言列表
+  // 這裡只是示範，不包含真實的留言列表獲取邏輯
+  const messages = [
+    { user: 'user1', text: '第一則留言' },
+    { user: 'user2', text: '第二則留言' }
+  ];
+
+  const messagesContainer = document.getElementById('messages');
+  messagesContainer.innerHTML = '';
+  messages.forEach(message => {
+    const messageElement = document.createElement('div');
+    messageElement.className = 'message';
+    messageElement.textContent = `${message.user}: ${message.text}`;
+    messagesContainer.appendChild(messageElement);
+  });
+}
+
+  </script>
+</body>
+</html>
+
